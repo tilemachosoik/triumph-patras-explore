@@ -26,8 +26,8 @@ const ContactSection = ({ language }: ContactSectionProps) => {
         address: "Notara 10",
         city: "Patra 264 41, Greece",
         phone: "+30 261 600 8888",
-        whatsapp: "+30 698 123 4567",
-        email: "info@triumphpatras.gr"
+        whatsapp: "+30 694 382 0418",
+        email: "triumphandriopoulos@gmail.com"
       },
       contact: {
         title: "Contact Information",
@@ -77,8 +77,8 @@ const ContactSection = ({ language }: ContactSectionProps) => {
         address: "Νοταρά 10",
         city: "Πάτρα 264 41, Ελλάδα",
         phone: "+30 261 600 8888",
-        whatsapp: "+30 698 123 4567",
-        email: "info@triumphpatras.gr"
+        whatsapp: "+30 694 382 0418",
+        email: "triumphandriopoulos@gmail.com"
       },
       contact: {
         title: "Στοιχεία Επικοινωνίας",
