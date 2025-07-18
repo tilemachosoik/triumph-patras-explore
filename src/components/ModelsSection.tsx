@@ -26,8 +26,8 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
       testRide: "Book Test Ride",
       models: [
         {
-          name: "Classic",
-          //category: "Modern Classics",
+          name: "Modern Classic",
+          category: "Classics",
           description: "Timeless British style meets modern engineering. The classics capture the essence of motorcycling heritage.",
           image: classicsImage,
           icon: Bike,
@@ -35,7 +35,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Adventure", 
-          //category: "Adventure",
+          category: "Adventure",
           description: "Built for adventure and exploration. The Tiger series delivers capability both on and off the road.",
           image: adventureImage,
           icon: Mountain,
@@ -43,7 +43,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Roadsters",
-          //category: "Roadster",
+          category: "Roadster",
           description: "Pure performance and adrenaline. The roadsters represent the cutting edge of Triumph engineering.",
           image: roadstersImage,
           icon: Zap,
@@ -51,7 +51,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Off Road",
-          //category: "Off Road",
+          category: "Off Road",
           description: "Engineered for dirt, dust, and domination. The off-road lineup is purpose-built for motocross and enduro performance.",
           image: offroadImage,
           icon: Activity, // Suggests movement/action; ideal for rugged performance
@@ -59,7 +59,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Rocket",
-          //category: "Rocket",
+          category: "Rocket",
           description: "The pinnacle of power and presence. The Rocket delivers unmatched torque and a muscular, unmistakable stance.",
           image: rocketImage,
           icon: Rocket,
@@ -67,7 +67,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Sport",
-          //category: "Sport",
+          category: "Sport",
           description: "Sleek, fast, and focused. The sport series brings race-inspired design and dynamics to the road.",
           image: sportImage,
           icon: Speedometer, // Represents speed and precision
@@ -83,8 +83,8 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
       testRide: "Κλείστε Δοκιμή",
       models: [
         {
-          name: "Classics",
-          //category: "Μοντέρνα Κλασικά",
+          name: "Modern Classics",
+          category: "Κλασικά",
           description: "Διαχρονικό βρετανικό στυλ συναντά μοντέρνα μηχανική. Τα classics αποτυπώνουν την ουσία της μοτοσικλετιστικής παράδοσης.",
           image: classicsImage,
           icon: Bike,
@@ -92,7 +92,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Adventure",
-          //category: "Adventure",
+          category: "Adventure",
           description: "Κατασκευασμένη για περιπέτεια και εξερεύνηση. Η σειρά Tiger προσφέρει δυνατότητες τόσο στο δρόμο όσο και εκτός.",
           image: adventureImage,
           icon: Mountain,
@@ -100,7 +100,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Roadsters",
-          //category: "Roadster",
+          category: "Roadster",
           description: "Καθαρή απόδοση και αδρεναλίνη. Τα roadsters αντιπροσωπεύουν την αιχμή της μηχανικής Triumph.",
           image: roadstersImage,
           icon: Zap,
@@ -108,7 +108,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Off Road",
-          //category: "Off Road",
+          category: "Off Road",
           description: "Σχεδιασμένες για χώμα, σκόνη και κυριαρχία. Οι off-road μοτοσυκλέτες είναι φτιαγμένες για επιδόσεις στο motocross και το enduro.",
           image: offroadImage,
           icon: Activity, // Suggests movement/action; ideal for rugged performance
@@ -116,7 +116,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Rocket",
-          //category: "Rocket",
+          category: "Rocket",
           description: "Η απόλυτη ισχύς και επιβλητικότητα. Η Rocket προσφέρει αξεπέραστη ροπή και μια δυναμική, χαρακτηριστική παρουσία.",
           image: rocketImage,
           icon: Rocket,
@@ -124,7 +124,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         },
         {
           name: "Sport",
-          //category: "Sport",
+          category: "Sport",
           description: "Κομψές, γρήγορες και εστιασμένες στις επιδόσεις. Οι sport μοτοσυκλέτες φέρνουν τον αγωνιστικό σχεδιασμό στον δρόμο.",
           image: sportImage,
           icon: Speedometer,
