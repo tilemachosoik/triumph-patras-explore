@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import classicsImage from "@/assets/OE_SpeedTwin900_MY25_CW4I2117_GE.jpg";
 import adventureImage from "@/assets/Triumph_Tiger_900_GTPRO__Road_Statics_2024_011.jpg";
 import roadstersImage from "@/assets/Triumph_MY23_Street_Triple_RS_Static_09.jpg";
+import offroadImage from "@/assets/TF_250X_MY26_0004.jpg";
 
 interface ModelsSectionProps {
   language: 'en' | 'gr';
@@ -39,10 +40,10 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
         },
         {
-          name: "Adventure", 
-          category: "Adventure",
+          name: "Off Road", 
+          category: "Enduro",
           description: "Built for adventure and exploration. The Tiger series delivers capability both on and off the road.",
-          image: adventureImage,
+          image: offroadImage,
           icon: Mountain,
           features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
         },
