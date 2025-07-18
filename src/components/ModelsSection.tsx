@@ -3,9 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Zap, Mountain, Wrench, Bike } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import bonnevilleImage from "@/assets/bonneville.jpg";
-import tigerImage from "@/assets/tiger.jpg";
-import speedTripleImage from "@/assets/speed-triple.jpg";
+import classicsImage from "@/assets/OE_SpeedTwin900_MY25_CW4I2117_GE.jpg";
+import adventureImage from "@/assets/Triumph_Tiger_900_GTPRO__Road_Statics_2024_011.jpg";
+import roadstersImage from "@/assets/Triumph_MY23_Street_Triple_RS_Static_09.jpg";
 
 interface ModelsSectionProps {
   language: 'en' | 'gr';
@@ -23,26 +23,26 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
       testRide: "Book Test Ride",
       models: [
         {
-          name: "Bonneville Series",
+          name: "Modern Classics",
           category: "Modern Classics",
-          description: "Timeless British style meets modern engineering. The Bonneville captures the essence of motorcycling heritage.",
-          image: bonnevilleImage,
+          description: "Timeless British style meets modern engineering. The classics capture the essence of motorcycling heritage.",
+          image: classicsImage,
           icon: Bike,
           features: ["Classic Styling", "Modern Performance", "Various Displacements"]
         },
         {
-          name: "Tiger Series", 
+          name: "Adventure", 
           category: "Adventure",
           description: "Built for adventure and exploration. The Tiger series delivers capability both on and off the road.",
-          image: tigerImage,
+          image: adventureImage,
           icon: Mountain,
           features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
         },
         {
-          name: "Speed Series",
+          name: "Roadsters",
           category: "Roadster",
-          description: "Pure performance and adrenaline. The Speed series represents the cutting edge of Triumph engineering.",
-          image: speedTripleImage,
+          description: "Pure performance and adrenaline. The roadsters represent the cutting edge of Triumph engineering.",
+          image: roadstersImage,
           icon: Zap,
           features: ["High Performance", "Track Ready", "Advanced Suspension"]
         }
@@ -56,26 +56,26 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
       testRide: "Κλείστε Δοκιμή",
       models: [
         {
-          name: "Σειρά Bonneville",
+          name: "Classics",
           category: "Μοντέρνα Κλασικά",
-          description: "Διαχρονικό βρετανικό στυλ συναντά μοντέρνα μηχανική. Η Bonneville αποτυπώνει την ουσία της μοτοσικλετιστικής παράδοσης.",
-          image: bonnevilleImage,
+          description: "Διαχρονικό βρετανικό στυλ συναντά μοντέρνα μηχανική. Τα classics αποτυπώνουν την ουσία της μοτοσικλετιστικής παράδοσης.",
+          image: classicsImage,
           icon: Bike,
           features: ["Κλασικό Στυλ", "Μοντέρνα Απόδοση", "Διάφοροι Κυβισμοί"]
         },
         {
-          name: "Σειρά Tiger",
+          name: "Adventure",
           category: "Adventure",
           description: "Κατασκευασμένη για περιπέτεια και εξερεύνηση. Η σειρά Tiger προσφέρει δυνατότητες τόσο στο δρόμο όσο και εκτός.",
-          image: tigerImage,
+          image: adventureImage,
           icon: Mountain,
           features: ["Off-Road Ικανότητα", "Άνεση Μεγάλων Αποστάσεων", "Προηγμένα Ηλεκτρονικά"]
         },
         {
-          name: "Σειρά Speed",
+          name: "Roadsters",
           category: "Roadster",
-          description: "Καθαρή απόδοση και αδρεναλίνη. Η σειρά Speed αντιπροσωπεύει την αιχμή της μηχανικής Triumph.",
-          image: speedTripleImage,
+          description: "Καθαρή απόδοση και αδρεναλίνη. Τα roadsters αντιπροσωπεύουν την αιχμή της μηχανικής Triumph.",
+          image: roadstersImage,
           icon: Zap,
           features: ["Υψηλή Απόδοση", "Έτοιμη για Πίστα", "Προηγμένη Ανάρτηση"]
         }
