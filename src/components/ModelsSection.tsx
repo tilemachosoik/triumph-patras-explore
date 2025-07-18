@@ -56,22 +56,6 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           image: offroadImage,
           icon: Activity,
           features: ["Lightweight Frames", "Race-Ready Suspension", "Precision Handling"]
-        },
-        {
-          name: "Rocket",
-          category: "Rocket",
-          description: "The pinnacle of power and presence. The Rocket delivers unmatched torque and a muscular, unmistakable stance.",
-          image: rocketImage,
-          icon: Rocket,
-          features: ["World’s Largest Production Engine", "Premium Finishes", "Commanding Ride"]
-        },
-        {
-          name: "Sport",
-          category: "Sport",
-          description: "Sleek, fast, and focused. The sport series brings race-inspired design and dynamics to the road.",
-          image: sportImage,
-          icon: Speedometer,
-          features: ["Aerodynamic Design", "Responsive Handling", "Track Technology"]
         }
       ]
     },
