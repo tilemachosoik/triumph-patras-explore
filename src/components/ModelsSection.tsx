@@ -39,6 +39,14 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
         },
         {
+          name: "Adventure", 
+          category: "Adventure",
+          description: "Built for adventure and exploration. The Tiger series delivers capability both on and off the road.",
+          image: adventureImage,
+          icon: Mountain,
+          features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
+        },
+        {
           name: "Roadsters",
           category: "Roadster",
           description: "Pure performance and adrenaline. The roadsters represent the cutting edge of Triumph engineering.",
