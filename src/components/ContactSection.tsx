@@ -23,15 +23,15 @@ const ContactSection = ({ language }: ContactSectionProps) => {
       subtitle: "Visit Our Showroom or Book a Test Ride",
       location: {
         title: "Visit Our Showroom",
-        address: "123 Patron Avenue",
-        city: "Patras 26442, Greece",
-        phone: "+30 2610 123 456",
+        address: "Notara 10",
+        city: "Patra 264 41, Greece",
+        phone: "+30 261 600 8888",
         whatsapp: "+30 698 123 4567",
         email: "info@triumphpatras.gr"
       },
       contact: {
         title: "Contact Information",
-        hours: "Monday - Friday: 9:00 - 18:00\nSaturday: 9:00 - 15:00\nSunday: Closed"
+        hours: "Monday: 9:00 - 15:00\nTuesday: 9:00 - 14:00, 17:30 - 21:00\nWednesday: 9:00 - 15:00\nThursday: 9:00 - 14:00, 17:30 - 21:00\nFriday: 9:00 - 14:00, 17:30 - 21:00\nSaturday: 9:00 - 15:00\nSunday: Closed"
       },
       form: {
         title: "Send us a Message",
@@ -74,15 +74,15 @@ const ContactSection = ({ language }: ContactSectionProps) => {
       subtitle: "Επισκεφθείτε το Showroom μας ή Κλείστε Δοκιμαστική Βόλτα",
       location: {
         title: "Επισκεφθείτε το Showroom μας",
-        address: "Πατρών 123",
-        city: "Πάτρα 26442, Ελλάδα",
-        phone: "+30 2610 123 456",
+        address: "Νοταρά 10",
+        city: "Πάτρα 264 41, Ελλάδα",
+        phone: "+30 261 600 8888",
         whatsapp: "+30 698 123 4567",
         email: "info@triumphpatras.gr"
       },
       contact: {
         title: "Στοιχεία Επικοινωνίας",
-        hours: "Δευτέρα - Παρασκευή: 9:00 - 18:00\nΣάββατο: 9:00 - 15:00\nΚυριακή: Κλειστά"
+        hours: "Δευτέρα: 9:00 - 15:00\nΤρίτη: 9:00 - 14:00, 17:30 - 21:00\nΤετάρτη: 9:00 - 15:00\nΠέμπτη: 9:00 - 14:00, 17:30 - 21:00\nΠαρασκευή: 9:00 - 14:00, 17:30 - 21:00\nΣάββατο: 9:00 - 15:00\nΚυριακή: Κλειστά"
       },
       form: {
         title: "Στείλτε μας Μήνυμα",

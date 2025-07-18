@@ -38,7 +38,11 @@ const AboutSection = ({ language }: AboutSectionProps) => {
       hours: {
         title: "Opening Hours",
         schedule: [
-          { day: "Monday - Friday", time: "9:00 - 18:00" },
+          { day: "Monday", time: "9:00 - 15:00" },
+          { day: "Tuesday", time: "9:00 - 14:00, 17:30 - 21:00" },
+          { day: "Wednesday", time: "9:00 - 15:00" },
+          { day: "Thursday", time: "9:00 - 14:00, 17:30 - 21:00" },
+          { day: "Friday", time: "9:00 - 14:00, 17:30 - 21:00" },
           { day: "Saturday", time: "9:00 - 15:00" },
           { day: "Sunday", time: "Closed" }
         ]
@@ -74,7 +78,11 @@ const AboutSection = ({ language }: AboutSectionProps) => {
       hours: {
         title: "Ωράριο Λειτουργίας",
         schedule: [
-          { day: "Δευτέρα - Παρασκευή", time: "9:00 - 18:00" },
+          { day: "Δευτέρα", time: "9:00 - 15:00" },
+          { day: "Τρίτη", time: "9:00 - 14:00, 17:30 - 21:00" },
+          { day: "Τετάρτη", time: "9:00 - 15:00" },
+          { day: "Πέμπτη", time: "9:00 - 14:00, 17:30 - 21:00" },
+          { day: "Παρασκευή", time: "9:00 - 14:00, 17:30 - 21:00" },
           { day: "Σάββατο", time: "9:00 - 15:00" },
           { day: "Κυριακή", time: "Κλειστά" }
         ]
