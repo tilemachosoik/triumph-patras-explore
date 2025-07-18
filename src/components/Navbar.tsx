@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Languages, MapPin } from "lucide-react";
+import triumphLogo from "@/assets/triumph-logo.png";
 
 interface NavbarProps {
   language: 'en' | 'gr';

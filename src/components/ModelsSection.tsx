@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Zap, Mountain, Wrench, Bike } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import bonnevilleImage from "@/assets/bonneville.jpg";
 import tigerImage from "@/assets/tiger.jpg";
 import speedTripleImage from "@/assets/speed-triple.jpg";
@@ -11,6 +12,8 @@ interface ModelsSectionProps {
 }
 
 const ModelsSection = ({ language }: ModelsSectionProps) => {
+  const navigate = useNavigate();
+  
   const content = {
     en: {
       title: "Triumph Model Range",
@@ -144,10 +147,14 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
                   <Button 
                     variant="outline" 
                     className="w-full group/btn"
-                    onClick={() => scrollToSection('contact')}
+                    onClick={() => {
+                      if (index === 0) navigate('/classics');
+                      else if (index === 1) navigate('/adventure');
+                      else if (index === 2) navigate('/roadsters');
+                    }}
                   >
                     <Wrench className="w-4 h-4 mr-2" />
-                    {t.testRide}
+                    {language === 'en' ? 'View Models' : 'Δείτε Μοντέλα'}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
