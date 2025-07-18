@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Zap, Mountain, Wrench, Bike, Activity, Rocket, Gauge } from "lucide-react";
+import { ArrowRight, Zap, Mountain, Wrench, Bike, LandPlot, Rocket, Gauge } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import classicsImage from "@/assets/OE_SpeedTwin900_MY25_CW4I2117_GE.jpg";
 import adventureImage from "@/assets/Triumph_Tiger_900_GTPRO__Road_Statics_2024_011.jpg";
