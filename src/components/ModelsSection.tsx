@@ -6,9 +6,6 @@ import { useNavigate } from "react-router-dom";
 import classicsImage from "@/assets/OE_SpeedTwin900_MY25_CW4I2117_GE.jpg";
 import adventureImage from "@/assets/Triumph_Tiger_900_GTPRO__Road_Statics_2024_011.jpg";
 import roadstersImage from "@/assets/Triumph_MY23_Street_Triple_RS_Static_09.jpg";
-import offroadImage from "@/assets/TF_250X_MY26_0004.jpg";
-import rocketImage from "@/assets/Rocket3R_Evel-Knievel_MY25_003.jpg";
-import sportImage from "@/assets/Triumph-Daytona-660-Statics37.jpg";
 
 interface ModelsSectionProps {
   language: 'en' | 'gr';
@@ -42,20 +39,20 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
         },
         {
+          name: "Adventure", 
+          category: "Adventure",
+          description: "Built for adventure and exploration. The Tiger series delivers capability both on and off the road.",
+          image: adventureImage,
+          icon: Mountain,
+          features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
+        },
+        {
           name: "Roadsters",
           category: "Roadster",
           description: "Pure performance and adrenaline. The roadsters represent the cutting edge of Triumph engineering.",
           image: roadstersImage,
           icon: Zap,
           features: ["High Performance", "Track Ready", "Advanced Suspension"]
-        },
-        {
-          name: "Off Road",
-          category: "Off Road",
-          description: "Engineered for dirt, dust, and domination. The off-road lineup is purpose-built for motocross and enduro performance.",
-          image: offroadImage,
-          icon: Activity,
-          features: ["Lightweight Frames", "Race-Ready Suspension", "Precision Handling"]
         }
       ]
     },
