@@ -21,7 +21,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
   classics: Bike,
   adventure: Mountain,
   roadsters: Zap,
-  offroad: Activity,
+  offroad: LandPlot,
   rocket: Rocket,
   sport: Gauge
   };
