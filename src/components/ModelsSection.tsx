@@ -40,20 +40,20 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
         },
         {
+          name: "Off Road", 
+          category: "Enduro",
+          description: "Built for adventure and exploration. The Tiger series delivers capability both on and off the road.",
+          image: offroadImage,
+          icon: Mountain,
+          features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
+        },
+        {
           name: "Roadsters",
           category: "Roadster",
           description: "Pure performance and adrenaline. The roadsters represent the cutting edge of Triumph engineering.",
           image: roadstersImage,
           icon: Zap,
           features: ["High Performance", "Track Ready", "Advanced Suspension"]
-        },
-        {
-          name: "Off Road", 
-          category: "Enduro",
-          description: "Engineered for dirt, dust, and domination. The off-road lineup is purpose-built for motocross and enduro performance.",
-          image: offroadImage,
-          icon: Terrain,
-          features: ["Lightweight Frames", "Race-Ready Suspension", "Precision Handling"]
         }
       ]
     },
