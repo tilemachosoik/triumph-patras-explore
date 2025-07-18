@@ -42,10 +42,10 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
         {
           name: "Off Road", 
           category: "Enduro",
-          description: "Built for adventure and exploration. The Tiger series delivers capability both on and off the road.",
+          description: "Engineered for dirt, dust, and domination. The off-road lineup is purpose-built for motocross and enduro performance.",
           image: offroadImage,
           icon: Mountain,
-          features: ["Off-Road Capability", "Long Distance Comfort", "Advanced Electronics"]
+          features: ["Lightweight Frames", "Race-Ready Suspension", "Precision Handling"]
         },
         {
           name: "Roadsters",
