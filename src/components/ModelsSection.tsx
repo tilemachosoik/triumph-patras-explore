@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Zap, Mountain, Wrench, Bike } from "lucide-react";
+import { ArrowRight, Zap, Mountain, Wrench, Bike, Activity, Rocket, Gauge } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import classicsImage from "@/assets/OE_SpeedTwin900_MY25_CW4I2117_GE.jpg";
 import adventureImage from "@/assets/Triumph_Tiger_900_GTPRO__Road_Statics_2024_011.jpg";
@@ -54,7 +54,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           //category: "Off Road",
           description: "Engineered for dirt, dust, and domination. The off-road lineup is purpose-built for motocross and enduro performance.",
           image: offroadImage,
-          icon: Activity, // Suggests movement/action; ideal for rugged performance
+          icon: Activity,
           features: ["Lightweight Frames", "Race-Ready Suspension", "Precision Handling"]
         },
         {
@@ -70,7 +70,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           //category: "Sport",
           description: "Sleek, fast, and focused. The sport series brings race-inspired design and dynamics to the road.",
           image: sportImage,
-          icon: Speedometer, // Represents speed and precision
+          icon: Gauge,
           features: ["Aerodynamic Design", "Responsive Handling", "Track Technology"]
         }
       ]
@@ -111,7 +111,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           //category: "Off Road",
           description: "Σχεδιασμένες για χώμα, σκόνη και κυριαρχία. Οι off-road μοτοσυκλέτες είναι φτιαγμένες για επιδόσεις στο motocross και το enduro.",
           image: offroadImage,
-          icon: Activity, // Suggests movement/action; ideal for rugged performance
+          icon: Activity,
           features: ["Ελαφρύς Σκελετός", "Αναρτήσεις Αγωνιστικών Προδιαγραφών", "Ακρίβεια στον Χειρισμό"]
         },
         {
@@ -127,7 +127,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           //category: "Sport",
           description: "Κομψές, γρήγορες και εστιασμένες στις επιδόσεις. Οι sport μοτοσυκλέτες φέρνουν τον αγωνιστικό σχεδιασμό στον δρόμο.",
           image: sportImage,
-          icon: Speedometer,
+          icon: Gauge,
           features: ["Αεροδυναμικός Σχεδιασμός", "Άμεση Ανταπόκριση", "Τεχνολογία Πίστας"]
         }
       ]
