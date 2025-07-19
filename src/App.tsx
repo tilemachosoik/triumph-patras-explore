@@ -11,6 +11,7 @@ import RoadstersPage from "./pages/RoadstersPage";
 import OffRoadPage from "./pages/OffRoadPage";
 import Rocket3Page from "./pages/Rocket3Page";
 import SportPage from "./pages/SportPage";
+import AllModelsPage from "./pages/AllModelsPage";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/off-road" element={<OffRoadPage />} />
           <Route path="/rocket-3" element={<Rocket3Page />} />
           <Route path="/sport" element={<SportPage />} />
+          <Route path="/all-models" element={<AllModelsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

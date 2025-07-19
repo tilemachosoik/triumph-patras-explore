@@ -214,6 +214,9 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
                       if (index === 0) navigate('/classics');
                       else if (index === 1) navigate('/adventure');
                       else if (index === 2) navigate('/roadsters');
+                      else if (index === 3) navigate('/off-road');
+                      else if (index === 4) navigate('/rocket-3');
+                      else if (index === 5) navigate('/sport');
                     }}
                   >
                     <Wrench className="w-4 h-4 mr-2" />
@@ -231,7 +234,7 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           <Button 
             variant="premium" 
             size="lg"
-            onClick={() => scrollToSection('contact')}
+            onClick={() => navigate('/all-models')}
             className="group px-8 py-4"
           >
             {t.viewAll}

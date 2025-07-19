@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, MessageSquare, Calendar, Bike } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 interface ContactSectionProps {
   language: 'en' | 'gr';
@@ -128,13 +129,42 @@ const ContactSection = ({ language }: ContactSectionProps) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
     
-    toast({
-      title: t.form.success,
-      description: "We'll get back to you as soon as possible."
-    });
+    const templateParams = {
+      from_name: formData.get('name'),
+      from_email: formData.get('email'),
+      phone: formData.get('phone'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+      to_email: 'triumphandriopoulos@gmail.com'
+    };
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+      
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        templateParams
+      );
+      
+      toast({
+        title: t.form.success,
+        description: "We'll get back to you as soon as possible."
+      });
+      
+      form.reset();
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      toast({
+        title: t.form.error,
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    }
     
     setIsSubmitting(false);
   };
@@ -143,13 +173,44 @@ const ContactSection = ({ language }: ContactSectionProps) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate booking
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
     
-    toast({
-      title: t.testRide.success,
-      description: "We'll contact you to confirm the details."
-    });
+    const templateParams = {
+      from_name: formData.get('test-name'),
+      from_email: formData.get('test-email'),
+      phone: formData.get('test-phone'),
+      model: formData.get('model'),
+      date: formData.get('test-date'),
+      experience: formData.get('experience'),
+      message: `Test ride request for ${formData.get('model')} on ${formData.get('test-date')}. Riding experience: ${formData.get('experience')}`,
+      to_email: 'triumphandriopoulos@gmail.com'
+    };
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+      
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEST_RIDE_TEMPLATE_ID', // Replace with your EmailJS test ride template ID
+        templateParams
+      );
+      
+      toast({
+        title: t.testRide.success,
+        description: "We'll contact you to confirm the details."
+      });
+      
+      form.reset();
+    } catch (error) {
+      console.error('Test ride booking failed:', error);
+      toast({
+        title: t.form.error,
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    }
     
     setIsSubmitting(false);
   };
@@ -244,22 +305,22 @@ const ContactSection = ({ language }: ContactSectionProps) => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name">{t.form.name}</Label>
-                      <Input id="name" required className="mt-1" />
+                      <Input id="name" name="name" required className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="email">{t.form.email}</Label>
-                      <Input id="email" type="email" required className="mt-1" />
+                      <Input id="email" name="email" type="email" required className="mt-1" />
                     </div>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="phone">{t.form.phone}</Label>
-                      <Input id="phone" type="tel" className="mt-1" />
+                      <Input id="phone" name="phone" type="tel" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="subject">{t.form.subject}</Label>
-                      <Input id="subject" required className="mt-1" />
+                      <Input id="subject" name="subject" required className="mt-1" />
                     </div>
                   </div>
                   
@@ -267,6 +328,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
                     <Label htmlFor="message">{t.form.message}</Label>
                     <Textarea 
                       id="message" 
+                      name="message"
                       required 
                       className="mt-1 min-h-[120px]"
                       placeholder="Tell us how we can help you..."
@@ -299,22 +361,22 @@ const ContactSection = ({ language }: ContactSectionProps) => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="test-name">{t.form.name}</Label>
-                      <Input id="test-name" required className="mt-1" />
+                      <Input id="test-name" name="test-name" required className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="test-email">{t.form.email}</Label>
-                      <Input id="test-email" type="email" required className="mt-1" />
+                      <Input id="test-email" name="test-email" type="email" required className="mt-1" />
                     </div>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="test-phone">{t.form.phone}</Label>
-                      <Input id="test-phone" type="tel" required className="mt-1" />
+                      <Input id="test-phone" name="test-phone" type="tel" required className="mt-1" />
                     </div>
                     <div>
                       <Label>{t.testRide.model}</Label>
-                      <Select required>
+                      <Select name="model" required>
                         <SelectTrigger className="mt-1">
                           <SelectValue placeholder={t.testRide.model} />
                         </SelectTrigger>
@@ -330,11 +392,11 @@ const ContactSection = ({ language }: ContactSectionProps) => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="test-date">{t.testRide.date}</Label>
-                      <Input id="test-date" type="date" required className="mt-1" />
+                      <Input id="test-date" name="test-date" type="date" required className="mt-1" />
                     </div>
                     <div>
                       <Label>{t.testRide.experience}</Label>
-                      <Select required>
+                      <Select name="experience" required>
                         <SelectTrigger className="mt-1">
                           <SelectValue placeholder={t.testRide.experience} />
                         </SelectTrigger>
