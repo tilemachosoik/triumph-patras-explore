@@ -27,7 +27,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       models: "Μοντέλα",
       about: "Σχετικά",
       contact: "Επικοινωνία", 
-      testRide: "Δοκιμαστική Βόλτα",
+      testRide: "Test Ride",
       phone: "Τηλέφωνο"
     }
   };
