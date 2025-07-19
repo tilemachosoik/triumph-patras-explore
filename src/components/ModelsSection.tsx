@@ -172,13 +172,13 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
             const IconComponent = model.icon;
             return (
               <Card key={index} className="group bg-gradient-card border-border hover:shadow-card-premium transition-all duration-500 overflow-hidden">
-                <div className="relative">
+                <div className="relative group inline-block overflow-hidden rounded-lg transition-transform duration-700 hover:scale-110 cursor-pointer h-64">
                   <img 
                     src={model.image} 
                     alt={model.name}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-700 group-hover:opacity-80"></div>
                   <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                     {model.category}
                   </Badge>
