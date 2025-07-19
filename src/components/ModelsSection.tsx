@@ -171,8 +171,8 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
           {t.models.map((model, index) => {
             const IconComponent = model.icon;
             return (
-              <Card key={index} className="group bg-gradient-card border-border hover:shadow-card-premium transition-all duration-500 overflow-hidden">
-                <div className="relative group inline-block overflow-hidden rounded-lg transition-transform duration-700 hover:scale-110 cursor-pointer h-64">
+              <Card key={index} className="group bg-gradient-card border-border hover:shadow-card-premium transition-all duration-500 overflow-hidden w-full">
+                <div className="relative group block overflow-hidden rounded-lg transition-transform duration-700 hover:scale-110 cursor-pointer h-64 origin-center">
                   <img 
                     src={model.image} 
                     alt={model.name}
