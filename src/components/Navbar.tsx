@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Languages, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import triumphLogo from "@/assets/logo.png";
 
 interface NavbarProps {
@@ -49,9 +50,9 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
           <img 
             src={triumphLogo} 
             alt="Triumph Logo" 
-            className="h-6 md:h-8 object-contain"
+            className="h-5 md:h-6 object-contain"
           />
-          <div className="text-sm text-muted-foreground">Patras Andriopoulos</div>
+          <span className="text-sm font-medium text-[#ab3137]">Patras Andriopoulos</span>
         </div>
 
         {/* Desktop Navigation */}
