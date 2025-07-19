@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Languages, MapPin } from "lucide-react";
-import triumphLogo from "@/assets/triumph-logo.png";
+import triumphLogo from "@/assets/logo.png";
 
 interface NavbarProps {
   language: 'en' | 'gr';
@@ -46,8 +46,12 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="text-2xl font-bold text-primary">TRIUMPH</div>
-          <div className="text-sm text-muted-foreground">Patras</div>
+          <img 
+            src={triumphLogo} 
+            alt="Triumph Logo" 
+            className="h-6 md:h-8 object-contain"
+          />
+          <div className="text-sm text-muted-foreground">Patras Andriopoulos</div>
         </div>
 
         {/* Desktop Navigation */}
