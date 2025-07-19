@@ -6,12 +6,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
+// Placeholder images - to be replaced with actual images
+import offRoadImage from "@/assets/hero-motorcycle.jpg";
+
 interface OffRoadPageProps {
   language?: 'en' | 'gr';
 }
 
 const OffRoadPage = ({ language = 'en' }: OffRoadPageProps) => {
   const [currentLanguage, setCurrentLanguage] = useState<'en' | 'gr'>(language);
+  const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
   const navigate = useNavigate();
 
   const content = {
@@ -39,24 +43,83 @@ const OffRoadPage = ({ language = 'en' }: OffRoadPageProps) => {
 
   const models = [
     {
-      id: "enduro",
-      name: "Enduro",
+      id: "tf-250-e",
+      name: "TF 250-E",
       price: "11.490,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/enduro%20tf%20250%20e%20-%20450%20e%20-%202025/cgi/tf-250-e-my25-jet-black-rhs-1080.png",
+      baseImage: "tf250eImage",
+      colors: [
+        { name: "Jet Black", price: "11.490,00 €", image: "tf250eBlackImage" },
+        { name: "Racing Yellow", price: "11.490,00 €", image: "tf250eYellowImage" }
+      ],
       specs: currentLanguage === 'en' 
-        ? ["Lightweight Aluminium Spine Frame", "Brembo Brakes", "DID and Michelin Tyres", "Dual Engine Maps (Athena)"]
-        : ["Lightweight Aluminium Spine Frame", "Brembo Brakes", "DID and Michelin Tyres", "Dual Engine Maps (Athena)"]
+        ? ["250cc 4-stroke engine", "Lightweight Aluminium Frame", "Brembo Brakes", "Electric start"]
+        : ["250κ.εκ. 4-χρονος κινητήρας", "Ελαφρό πλαίσιο αλουμινίου", "Φρένα Brembo", "Ηλεκτρική εκκίνηση"]
     },
     {
-      id: "motocross",
-      name: "Motocross",
-      price: null,
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/off-road/tf250/zb1/1080/tf250x_my24_jetblack_rhs_1080px.png",
+      id: "tf-450-e",
+      name: "TF 450-E",
+      price: "13.490,00 €",
+      baseImage: "tf450eImage", 
+      colors: [
+        { name: "Jet Black", price: "13.490,00 €", image: "tf450eBlackImage" },
+        { name: "Racing Yellow", price: "13.490,00 €", image: "tf450eYellowImage" }
+      ],
       specs: currentLanguage === 'en' 
-        ? ["Race focused", "Aluminium frame", "Top components"]
-        : ["Εστιασμένη στους αγώνες", "Πλαίσιο αλουμινίου", "Κορυφαία εξαρτήματα"]
+        ? ["450cc 4-stroke engine", "Lightweight Aluminium Frame", "Brembo Brakes", "Electric start"]
+        : ["450κ.εκ. 4-χρονος κινητήρας", "Ελαφρό πλαίσιο αλουμινίου", "Φρένα Brembo", "Ηλεκτρική εκκίνηση"]
+    },
+    {
+      id: "tf-250-x",
+      name: "TF 250-X",
+      price: "10.990,00 €",
+      baseImage: "tf250xImage",
+      colors: [
+        { name: "Jet Black", price: "10.990,00 €", image: "tf250xBlackImage" },
+        { name: "Racing Yellow", price: "10.990,00 €", image: "tf250xYellowImage" }
+      ],
+      specs: currentLanguage === 'en' 
+        ? ["250cc 4-stroke engine", "Motocross focused", "Competition ready", "Kick start only"]
+        : ["250κ.εκ. 4-χρονος κινητήρας", "Εστιασμένο στο motocross", "Έτοιμο για αγώνες", "Μόνο kick start"]
+    },
+    {
+      id: "tf-450-x",
+      name: "TF 450-X",
+      price: "12.990,00 €",
+      baseImage: "tf450xImage",
+      colors: [
+        { name: "Jet Black", price: "12.990,00 €", image: "tf450xBlackImage" },
+        { name: "Racing Yellow", price: "12.990,00 €", image: "tf450xYellowImage" }
+      ],
+      specs: currentLanguage === 'en' 
+        ? ["450cc 4-stroke engine", "Motocross focused", "Competition ready", "Kick start only"]
+        : ["450κ.εκ. 4-χρονος κινητήρας", "Εστιασμένο στο motocross", "Έτοιμο για αγώνες", "Μόνο kick start"]
     }
   ];
+
+  const handleColorSelect = (modelId: string, color: any) => {
+    setSelectedColors(prev => ({
+      ...prev,
+      [modelId]: color.name
+    }));
+  };
+
+  const getModelImage = (model: any) => {
+    const selectedColor = selectedColors[model.id];
+    if (selectedColor) {
+      const colorOption = model.colors.find((c: any) => c.name === selectedColor);
+      if (colorOption) return colorOption.image;
+    }
+    return model.baseImage || offRoadImage;
+  };
+
+  const getModelPrice = (model: any) => {
+    const selectedColor = selectedColors[model.id];
+    if (selectedColor) {
+      const colorOption = model.colors.find((c: any) => c.name === selectedColor);
+      if (colorOption) return colorOption.price;
+    }
+    return model.price;
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -80,11 +143,11 @@ const OffRoadPage = ({ language = 'en' }: OffRoadPageProps) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {models.map((model) => (
+          {models.map((model: any) => (
             <Card key={model.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative">
                 <img 
-                  src={model.image} 
+                  src={getModelImage(model) as string} 
                   alt={model.name}
                   className="w-full h-48 object-cover"
                 />
@@ -93,18 +156,36 @@ const OffRoadPage = ({ language = 'en' }: OffRoadPageProps) => {
               <CardHeader>
                 <CardTitle className="text-xl">{model.name}</CardTitle>
                 <div className="text-2xl font-bold text-primary">
-                  {model.price ? `${content[currentLanguage].priceFrom} ${model.price}` : content[currentLanguage].priceTba}
+                  {content[currentLanguage].priceFrom} {getModelPrice(model)}
                 </div>
               </CardHeader>
               
               <CardContent>
                 {model.specs && (
                   <ul className="text-sm text-muted-foreground mb-4 space-y-1">
-                    {model.specs.map((spec, index) => (
+                    {model.specs.map((spec: string, index: number) => (
                       <li key={index}>• {spec}</li>
                     ))}
                   </ul>
                 )}
+                
+                {/* Color Selection */}
+                <div className="mb-4">
+                  <p className="text-sm font-medium mb-2">Available Colors:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {model.colors.map((color: any, index: number) => (
+                      <Button
+                        key={index}
+                        variant={selectedColors[model.id] === color.name ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => handleColorSelect(model.id, color)}
+                        className="text-xs"
+                      >
+                        {color.name}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
                 
                 <div className="flex gap-2 flex-wrap">
                   <Button size="sm" className="flex-1">

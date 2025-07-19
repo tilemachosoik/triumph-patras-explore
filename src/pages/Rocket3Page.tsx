@@ -32,17 +32,61 @@ const Rocket3Page = ({ language = 'en' }: Rocket3PageProps) => {
     }
   };
 
+  const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
+
   const models = [
     {
-      id: "rocket-3-storm",
-      name: "Rocket 3 Storm",
+      id: "rocket-3-storm-r",
+      name: "Rocket 3 Storm R",
       price: "28.290,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/rocket%203/my23/rocket%203%20r/rocket-3-r_my23_matt-silver-ice_rhs_472px.png",
+      baseImage: "rocket3StormRImage",
+      colors: [
+        { name: "Matt Silver Ice", price: "28.290,00 €", image: "rocket3StormRSilverImage" },
+        { name: "Jet Black", price: "28.290,00 €", image: "rocket3StormRBlackImage" }
+      ],
       specs: currentLanguage === 'en' 
-        ? ["2500cc Rocket triple engine", "Ultimate high performance roadster"]
-        : ["2500cc Rocket triple engine", "Ultimate high performance roadster"]
+        ? ["2500cc Rocket triple engine", "Ultimate high performance roadster", "180 NM Max Torque"]
+        : ["2500cc Rocket triple engine", "Ultimate high performance roadster", "180 NM Μέγιστη Ροπή"]
+    },
+    {
+      id: "rocket-3-storm-gt",
+      name: "Rocket 3 Storm GT",
+      price: "30.290,00 €",
+      baseImage: "rocket3StormGtImage",
+      colors: [
+        { name: "Matt Silver Ice", price: "30.290,00 €", image: "rocket3StormGtSilverImage" },
+        { name: "Jet Black", price: "30.290,00 €", image: "rocket3StormGtBlackImage" }
+      ],
+      specs: currentLanguage === 'en' 
+        ? ["2500cc Rocket triple engine", "Grand touring comfort", "180 NM Max Torque", "Premium touring features"]
+        : ["2500cc Rocket triple engine", "Grand touring άνεση", "180 NM Μέγιστη Ροπή", "Premium touring χαρακτηριστικά"]
     }
   ];
+
+  const handleColorSelect = (modelId: string, color: any) => {
+    setSelectedColors(prev => ({
+      ...prev,
+      [modelId]: color.name
+    }));
+  };
+
+  const getModelImage = (model: any) => {
+    const selectedColor = selectedColors[model.id];
+    if (selectedColor) {
+      const colorOption = model.colors.find((c: any) => c.name === selectedColor);
+      if (colorOption) return colorOption.image;
+    }
+    return model.baseImage;
+  };
+
+  const getModelPrice = (model: any) => {
+    const selectedColor = selectedColors[model.id];
+    if (selectedColor) {
+      const colorOption = model.colors.find((c: any) => c.name === selectedColor);
+      if (colorOption) return colorOption.price;
+    }
+    return model.price;
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -66,11 +110,11 @@ const Rocket3Page = ({ language = 'en' }: Rocket3PageProps) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {models.map((model) => (
+          {models.map((model: any) => (
             <Card key={model.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative">
                 <img 
-                  src={model.image} 
+                  src={getModelImage(model) as string} 
                   alt={model.name}
                   className="w-full h-48 object-cover"
                 />
@@ -79,18 +123,36 @@ const Rocket3Page = ({ language = 'en' }: Rocket3PageProps) => {
               <CardHeader>
                 <CardTitle className="text-xl">{model.name}</CardTitle>
                 <div className="text-2xl font-bold text-primary">
-                  {content[currentLanguage].priceFrom} {model.price}
+                  {content[currentLanguage].priceFrom} {getModelPrice(model)}
                 </div>
               </CardHeader>
               
               <CardContent>
                 {model.specs && (
                   <ul className="text-sm text-muted-foreground mb-4 space-y-1">
-                    {model.specs.map((spec, index) => (
+                    {model.specs.map((spec: string, index: number) => (
                       <li key={index}>• {spec}</li>
                     ))}
                   </ul>
                 )}
+                
+                {/* Color Selection */}
+                <div className="mb-4">
+                  <p className="text-sm font-medium mb-2">Available Colors:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {model.colors.map((color: any, index: number) => (
+                      <Button
+                        key={index}
+                        variant={selectedColors[model.id] === color.name ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => handleColorSelect(model.id, color)}
+                        className="text-xs"
+                      >
+                        {color.name}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
                 
                 <div className="flex gap-2 flex-wrap">
                   <Button size="sm" className="flex-1">

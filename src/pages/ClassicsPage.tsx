@@ -4,7 +4,11 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowLeft, ExternalLink } from "lucide-react";
+
+// Placeholder images - to be replaced with actual images
+import classicsImage from "@/assets/bonneville.jpg";
 
 interface ClassicsPageProps {
   language?: 'en' | 'gr';
@@ -12,6 +16,7 @@ interface ClassicsPageProps {
 
 const ClassicsPage = ({ language = 'en' }: ClassicsPageProps) => {
   const [currentLanguage, setCurrentLanguage] = useState<'en' | 'gr'>(language);
+  const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
   const navigate = useNavigate();
 
   const content = {
@@ -37,77 +42,197 @@ const ClassicsPage = ({ language = 'en' }: ClassicsPageProps) => {
     }
   };
 
-  const models = [
-    {
-      id: "scrambler-400-xc",
-      name: "Scrambler 400 XC",
-      price: "7.150,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/scrambler%20400%20xc%202025/scrambler-400-xc_my25_racing-yellow_rhs_1080.jpg",
-      isNew: true,
-      specs: currentLanguage === 'en' 
-        ? ["398cc TR Engine", "16,000 km service interval"]
-        : ["398 κ.εκ. TR Κινητήρας", "16.000 χλμ διάστημα σέρβις"]
-    },
-    {
-      id: "speed-400",
-      name: "Speed 400",
-      price: "5.690,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/modern-classics/t%20series/speed%20400/speed%20400%20cgi/472/speed%20400_my24_carnival%20red_rhs.png",
-      specs: currentLanguage === 'en' 
-        ? ["398cc TR Engine", "16,000 km service interval"]
-        : ["398 κ.εκ. TR Κινητήρας", "16.000 χλμ διάστημα σέρβις"]
-    },
-    {
-      id: "scrambler-400-x",
-      name: "Scrambler 400 X",
-      price: "6.390,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/modern-classics/t%20series/scrambler%20400%20x/scrambler%20400%20x%20cgi/472/scrambler%20400%20x_my24_matt%20khaki%20green_rhs.png",
-      specs: currentLanguage === 'en' 
-        ? ["398cc TR Engine", "16,000 km service interval"]
-        : ["398 κ.εκ. TR Κινητήρας", "16.000 χλμ διάστημα σέρβις"]
-    },
-    {
-      id: "speed-twin-900",
-      name: currentLanguage === 'en' ? "NEW Speed Twin 900" : "ΟΛΟΚΑΙΝΟΥΡΓΙΑ Speed Twin 900",
-      price: "9.390,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/speed%20twin%20900%202025/speed%20twin%20900%20my25/speed-twin-900-my25-purewhite-rhs-1080.png",
-      isNew: true,
-      specs: currentLanguage === 'en' 
-        ? ["900cc Engine", "80 NM Max Torque", "65 PS Max Power", "16,000 km Service Interval"]
-        : ["900 Κ.ΕΚ. Κινητήρας", "80 NM Μέγιστη Ροπή", "65 PS Μέγιστη Ιπποδύναμη", "16.000 Διάστημα Σέρβις"]
-    },
-    {
-      id: "bonneville-bobber",
-      name: "Bonneville Bobber",
-      price: "16.990,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/modern-classics/my25/my25%20colours/dx4%20bobber/web/472/bonneville_bobber_my25_matt_graphite-matt_baja_orange_rhs_472px.png",
-      hasIconEdition: true
-    },
-    {
-      id: "scrambler-1200",
-      name: "Scrambler 1200",
-      price: "14.990,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/modern-classics/my24%20scrambler%201200/cgi/web/472/scrambler%201200%20x_my24_ash%20grey_rhs.png",
-      hasIconEdition: true
-    },
-    {
-      id: "bonneville-speedmaster",
-      name: "Bonneville Speedmaster",
-      price: "16.990,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/modern-classics/my25/my25%20colours/dw4%20speedmaster/web/472/bonneville_speedmaster_my25_snowdonia_white_rhs_472px.png",
-      hasIconEdition: true
-    },
-    {
-      id: "speed-twin-1200",
-      name: currentLanguage === 'en' ? "NEW Speed Twin 1200" : "ΝΕΑ ΣΕΙΡΑ Speed Twin 1200",
-      price: "13.990,00 €",
-      image: "https://media.triumphmotorcycles.co.uk/image/upload/q_auto:eco/SitecoreMediaLibrary/media-library/images/motorcycles/speed%20twin%201200_rs%202025/speed-twin-1200-rs-my25-baja-orange-rhs-472.png",
-      isNew: true,
-      specs: currentLanguage === 'en' 
-        ? ["1200cc Bonneville 'High Power' twin engine", "Accessible custom roadster setup", "A performance-focused modern classic"]
-        : ["Δικύλινδρος κινητήρας Bonneville 'High Power' 1200κ.εκ.", "Προσβάσιμη διάταξη custom roadster", "Ένα modern classic μοντέλο με έμφαση στις επιδόσεις"]
+  const modelsByCategory = {
+    400: [
+      {
+        id: "speed-400",
+        name: "Speed 400",
+        price: "5.690,00 €",
+        baseImage: "speed400Image",
+        colors: [
+          { name: "Carnival Red", price: "5.690,00 €", image: "speed400RedImage" },
+          { name: "Racing Yellow", price: "5.690,00 €", image: "speed400YellowImage" },
+          { name: "Matt Khaki Green", price: "5.690,00 €", image: "speed400GreenImage" }
+        ],
+        specs: currentLanguage === 'en' 
+          ? ["398cc TR Engine", "16,000 km service interval"]
+          : ["398 κ.εκ. TR Κινητήρας", "16.000 χλμ διάστημα σέρβις"]
+      },
+      {
+        id: "scrambler-400x",
+        name: "Scrambler 400 X",
+        price: "6.390,00 €",
+        baseImage: "scrambler400xImage",
+        colors: [
+          { name: "Matt Khaki Green", price: "6.390,00 €", image: "scrambler400xGreenImage" },
+          { name: "Racing Yellow", price: "6.390,00 €", image: "scrambler400xYellowImage" }
+        ],
+        specs: currentLanguage === 'en' 
+          ? ["398cc TR Engine", "16,000 km service interval"]
+          : ["398 κ.εκ. TR Κινητήρας", "16.000 χλμ διάστημα σέρβις"]
+      },
+      {
+        id: "scrambler-400xc",
+        name: "Scrambler 400 XC",
+        price: "7.150,00 €",
+        baseImage: "scrambler400xcImage",
+        isNew: true,
+        colors: [
+          { name: "Racing Yellow", price: "7.150,00 €", image: "scrambler400xcYellowImage" },
+          { name: "Matt Khaki Green", price: "7.150,00 €", image: "scrambler400xcGreenImage" }
+        ],
+        specs: currentLanguage === 'en' 
+          ? ["398cc TR Engine", "16,000 km service interval"]
+          : ["398 κ.εκ. TR Κινητήρας", "16.000 χλμ διάστημα σέρβις"]
+      }
+    ],
+    900: [
+      {
+        id: "speed-twin-900",
+        name: currentLanguage === 'en' ? "Speed Twin 900" : "Speed Twin 900",
+        price: "9.390,00 €",
+        baseImage: "speedTwin900Image",
+        isNew: true,
+        colors: [
+          { name: "Pure White", price: "9.390,00 €", image: "speedTwin900WhiteImage" },
+          { name: "Matt Graphite", price: "9.390,00 €", image: "speedTwin900GraphiteImage" }
+        ],
+        specs: currentLanguage === 'en' 
+          ? ["900cc Engine", "80 NM Max Torque", "65 PS Max Power", "16,000 km Service Interval"]
+          : ["900 Κ.ΕΚ. Κινητήρας", "80 NM Μέγιστη Ροπή", "65 PS Μέγιστη Ιπποδύναμη", "16.000 Διάστημα Σέρβις"]
+      },
+      {
+        id: "scrambler-900",
+        name: "Scrambler 900",
+        price: "11.990,00 €",
+        baseImage: "scrambler900Image",
+        colors: [
+          { name: "Matt Khaki Green", price: "11.990,00 €", image: "scrambler900GreenImage" },
+          { name: "Pure White", price: "11.990,00 €", image: "scrambler900WhiteImage" }
+        ]
+      },
+      {
+        id: "bonneville-t100",
+        name: "Bonneville T100",
+        price: "12.990,00 €",
+        baseImage: "bonnevilleT100Image",
+        colors: [
+          { name: "Jet Black", price: "12.990,00 €", image: "bonnevilleT100BlackImage" },
+          { name: "Pure White", price: "12.990,00 €", image: "bonnevilleT100WhiteImage" }
+        ]
+      }
+    ],
+    1200: [
+      {
+        id: "speed-twin-1200",
+        name: "Speed Twin 1200",
+        price: "13.990,00 €",
+        baseImage: "speedTwin1200Image",
+        isNew: true,
+        colors: [
+          { name: "Baja Orange", price: "13.990,00 €", image: "speedTwin1200OrangeImage" },
+          { name: "Matt Graphite", price: "13.990,00 €", image: "speedTwin1200GraphiteImage" }
+        ]
+      },
+      {
+        id: "speed-twin-1200-rs",
+        name: "Speed Twin 1200 RS",
+        price: "15.990,00 €",
+        baseImage: "speedTwin1200RsImage",
+        colors: [
+          { name: "Baja Orange", price: "15.990,00 €", image: "speedTwin1200RsOrangeImage" },
+          { name: "Matt Graphite", price: "15.990,00 €", image: "speedTwin1200RsGraphiteImage" }
+        ]
+      },
+      {
+        id: "scrambler-1200-x",
+        name: "Scrambler 1200 X",
+        price: "14.990,00 €",
+        baseImage: "scrambler1200xImage",
+        hasIconEdition: true,
+        colors: [
+          { name: "Ash Grey", price: "14.990,00 €", image: "scrambler1200xGreyImage" },
+          { name: "Icon Edition Gold", price: "16.990,00 €", image: "scrambler1200xIconImage" }
+        ]
+      },
+      {
+        id: "scrambler-1200-xe",
+        name: "Scrambler 1200 XE",
+        price: "16.990,00 €",
+        baseImage: "scrambler1200xeImage",
+        colors: [
+          { name: "Matt Khaki Green", price: "16.990,00 €", image: "scrambler1200xeGreenImage" },
+          { name: "Pure White", price: "16.990,00 €", image: "scrambler1200xeWhiteImage" }
+        ]
+      },
+      {
+        id: "bonneville-t120",
+        name: "Bonneville T120",
+        price: "14.990,00 €",
+        baseImage: "bonnevilleT120Image",
+        colors: [
+          { name: "Jet Black", price: "14.990,00 €", image: "bonnevilleT120BlackImage" },
+          { name: "Pure White", price: "14.990,00 €", image: "bonnevilleT120WhiteImage" }
+        ]
+      },
+      {
+        id: "bonneville-t120-black",
+        name: "Bonneville T120 Black",
+        price: "15.990,00 €",
+        baseImage: "bonnevilleT120BlackImage",
+        colors: [
+          { name: "Jet Black", price: "15.990,00 €", image: "bonnevilleT120BlackJetImage" }
+        ]
+      },
+      {
+        id: "bonneville-bobber",
+        name: "Bonneville Bobber",
+        price: "16.990,00 €",
+        baseImage: "bonneBobberImage",
+        hasIconEdition: true,
+        colors: [
+          { name: "Matt Graphite", price: "16.990,00 €", image: "bonneBobberGraphiteImage" },
+          { name: "Icon Edition", price: "18.990,00 €", image: "bonneBobberIconImage" }
+        ]
+      },
+      {
+        id: "bonneville-speedmaster",
+        name: "Bonneville Speedmaster",
+        price: "16.990,00 €",
+        baseImage: "bonneSpeedmasterImage",
+        hasIconEdition: true,
+        colors: [
+          { name: "Snowdonia White", price: "16.990,00 €", image: "bonneSpeedmasterWhiteImage" },
+          { name: "Icon Edition", price: "18.990,00 €", image: "bonneSpeedmasterIconImage" }
+        ]
+      }
+    ]
+  };
+
+  const handleColorSelect = (modelId: string, color: any) => {
+    setSelectedColors(prev => ({
+      ...prev,
+      [modelId]: color.name
+    }));
+  };
+
+  const getModelImage = (model: any) => {
+    const selectedColor = selectedColors[model.id];
+    if (selectedColor) {
+      const colorOption = model.colors.find((c: any) => c.name === selectedColor);
+      if (colorOption) return colorOption.image;
     }
-  ];
+    return model.baseImage || classicsImage;
+  };
+
+  const getModelPrice = (model: any) => {
+    const selectedColor = selectedColors[model.id];
+    if (selectedColor) {
+      const colorOption = model.colors.find((c: any) => c.name === selectedColor);
+      if (colorOption) return colorOption.price;
+    }
+    return model.price;
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -130,53 +255,83 @@ const ClassicsPage = ({ language = 'en' }: ClassicsPageProps) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {models.map((model) => (
-            <Card key={model.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="relative">
-                <img 
-                  src={model.image} 
-                  alt={model.name}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-2 right-2 flex gap-2">
-                  {model.isNew && (
-                    <Badge variant="destructive">{content[currentLanguage].newBadge}</Badge>
-                  )}
-                  {model.hasIconEdition && (
-                    <Badge variant="secondary">{content[currentLanguage].iconBadge}</Badge>
-                  )}
-                </div>
+        <Tabs defaultValue="400" className="w-full">
+          <TabsList className="grid w-full grid-cols-3">
+            <TabsTrigger value="400">400cc</TabsTrigger>
+            <TabsTrigger value="900">900cc</TabsTrigger>
+            <TabsTrigger value="1200">1200cc</TabsTrigger>
+          </TabsList>
+          
+          {Object.entries(modelsByCategory).map(([category, models]) => (
+            <TabsContent key={category} value={category}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                {models.map((model: any) => (
+                  <Card key={model.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <div className="relative">
+                      <img 
+                        src={getModelImage(model) as string} 
+                        alt={model.name}
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="absolute top-2 right-2 flex gap-2">
+                        {model.isNew && (
+                          <Badge variant="destructive">{content[currentLanguage].newBadge}</Badge>
+                        )}
+                        {model.hasIconEdition && (
+                          <Badge variant="secondary">{content[currentLanguage].iconBadge}</Badge>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <CardHeader>
+                      <CardTitle className="text-xl">{model.name}</CardTitle>
+                      <div className="text-2xl font-bold text-primary">
+                        {content[currentLanguage].priceFrom} {getModelPrice(model)}
+                      </div>
+                    </CardHeader>
+                    
+                    <CardContent>
+                      {model.specs && (
+                        <ul className="text-sm text-muted-foreground mb-4 space-y-1">
+                          {model.specs.map((spec: string, index: number) => (
+                            <li key={index}>• {spec}</li>
+                          ))}
+                        </ul>
+                      )}
+                      
+                      {/* Color Selection */}
+                      <div className="mb-4">
+                        <p className="text-sm font-medium mb-2">Available Colors:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {model.colors.map((color: any, index: number) => (
+                            <Button
+                              key={index}
+                              variant={selectedColors[model.id] === color.name ? "default" : "outline"}
+                              size="sm"
+                              onClick={() => handleColorSelect(model.id, color)}
+                              className="text-xs"
+                            >
+                              {color.name}
+                            </Button>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <div className="flex gap-2 flex-wrap">
+                        <Button size="sm" className="flex-1">
+                          {content[currentLanguage].configureButton}
+                        </Button>
+                        <Button variant="outline" size="sm">
+                          <ExternalLink className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-              
-              <CardHeader>
-                <CardTitle className="text-xl">{model.name}</CardTitle>
-                <div className="text-2xl font-bold text-primary">
-                  {content[currentLanguage].priceFrom} {model.price}
-                </div>
-              </CardHeader>
-              
-              <CardContent>
-                {model.specs && (
-                  <ul className="text-sm text-muted-foreground mb-4 space-y-1">
-                    {model.specs.map((spec, index) => (
-                      <li key={index}>• {spec}</li>
-                    ))}
-                  </ul>
-                )}
-                
-                <div className="flex gap-2 flex-wrap">
-                  <Button size="sm" className="flex-1">
-                    {content[currentLanguage].configureButton}
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <ExternalLink className="h-4 w-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            </TabsContent>
           ))}
-        </div>
+        </Tabs>
       </div>
     </div>
   );
