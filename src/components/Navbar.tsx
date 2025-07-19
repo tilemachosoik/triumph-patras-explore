@@ -54,7 +54,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               className="h-5 md:h-6 object-contain"
             />
           </Link>
-          <span className="text-sm font-medium text-[#ab3137]">Patras Andriopoulos</span>
+          <span className="text-sm font-semibold text-destructive">Patras Andriopoulos</span>
         </div>
 
         {/* Desktop Navigation */}
