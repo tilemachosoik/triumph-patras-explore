@@ -97,13 +97,13 @@ const ContactSection = ({ language }: ContactSectionProps) => {
         error: "Αποτυχία αποστολής. Παρακαλώ προσπαθήστε ξανά."
       },
       testRide: {
-        title: "Κλείστε Δοκιμαστική Βόλτα",
+        title: "Κλείστε Test Ride",
         model: "Επιλέξτε Μοντέλο",
         date: "Προτιμώμενη Ημερομηνία",
         time: "Προτιμώμενη Ώρα",
         experience: "Εμπειρία Οδήγησης",
         book: "Κλείστε Δοκιμή",
-        success: "Η δοκιμαστική βόλτα κλείστηκε επιτυχώς!",
+        success: "Το αίτημά σας έχει σταλεί επιτυχώς!",
         modelOptions: [
           "Bonneville T100",
           "Bonneville T120",
