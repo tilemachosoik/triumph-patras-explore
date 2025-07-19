@@ -11,10 +11,10 @@ const AboutSection = ({ language }: AboutSectionProps) => {
     en: {
       title: "Triumph Patras Andriopoulos",
       subtitle: "Your Trusted Triumph Partner in Western Greece",
-      description: "For over 40 years, we have been proudly serving the motorcycling community in Western Greece as the official Triumph dealer. Our family-owned dealership combines decades of experience with genuine passion for British motorcycles.",
+      description: "For over 30 years, we have been proudly serving the motorcycling community in Western Greece. Our dealership combines decades of experience with genuine passion for British motorcycles.",
       contact: "Get in Touch",
       stats: [
-        { icon: Award, number: "40+", label: "Years of Excellence" },
+        { icon: Award, number: "30+", label: "Years of Excellence" },
         { icon: Users, number: "5000+", label: "Happy Customers" },
         { icon: Wrench, number: "100%", label: "Certified Service" }
       ],
@@ -22,7 +22,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
         {
           icon: MapPin,
           title: "Prime Location",
-          description: "Conveniently located in Patras, serving all of Western Greece with easy access and ample parking."
+          description: "Conveniently located in Patras, serving all of Western Greece with easy access."
         },
         {
           icon: Wrench,
@@ -50,11 +50,11 @@ const AboutSection = ({ language }: AboutSectionProps) => {
     },
     gr: {
       title: "Triumph Πάτρα Ανδριόπουλος",
-      subtitle: "Ο Έμπιστος Συνεργάτης σας για Triumph στη Δυτική Ελλάδα",
-      description: "Για περισσότερα από 40 χρόνια, υπηρετούμε με περηφάνια την μοτοσικλετιστική κοινότητα της Δυτικής Ελλάδας ως επίσημος αντιπρόσωπος Triumph. Το οικογενειακό μας κατάστημα συνδυάζει δεκαετίες εμπειρίας με γνήσιο πάθος για τις βρετανικές μοτοσικλέτες.",
-      contact: "Επικοινωνήστε",
+      subtitle: "Ο Έμπιστος Συνεργάτης σας για Μοτοσικλέτες Triumph στη Δυτική Ελλάδα",
+      description: "Για περισσότερα από 30 χρόνια, υπηρετούμε με περηφάνια την μοτοσικλετιστική κοινότητα της Δυτικής Ελλάδας. Το κατάστημα μας συνδυάζει δεκαετίες εμπειρίας με γνήσιο πάθος για τις βρετανικές μοτοσικλέτες.",
+      contact: "Επικοινωνήστε μαζί μας",
       stats: [
-        { icon: Award, number: "40+", label: "Χρόνια Αριστείας" },
+        { icon: Award, number: "30+", label: "Χρόνια Αριστείας" },
         { icon: Users, number: "5000+", label: "Ικανοποιημένοι Πελάτες" },
         { icon: Wrench, number: "100%", label: "Πιστοποιημένο Σέρβις" }
       ],
@@ -62,7 +62,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
         {
           icon: MapPin,
           title: "Προνομιακή Τοποθεσία",
-          description: "Βολικά τοποθετημένοι στην Πάτρα, εξυπηρετούμε όλη τη Δυτική Ελλάδα με εύκολη πρόσβαση και άφθονο χώρο στάθμευσης."
+          description: "Στρατηγικά τοποθετημένοι στην Πάτρα, εξυπηρετούμε όλη τη Δυτική Ελλάδα με εύκολη πρόσβαση. και άφθονο χώρο στάθμευσης."
         },
         {
           icon: Wrench,
