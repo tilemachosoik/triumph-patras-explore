@@ -172,17 +172,20 @@ const ModelsSection = ({ language }: ModelsSectionProps) => {
             const IconComponent = model.icon;
             return (
               <Card key={index} className="group bg-gradient-card border-border hover:shadow-card-premium transition-all duration-500 overflow-hidden w-full">
-                <div className="relative group block overflow-hidden rounded-lg transition-transform duration-700 hover:scale-110 cursor-pointer h-64 origin-center">
-                  <img 
-                    src={model.image} 
-                    alt={model.name}
-                    className="w-full h-full object-cover transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-700 group-hover:opacity-80"></div>
-                  <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
+                <div className="relative cursor-pointer h-64 rounded-lg overflow-hidden group">
+                  <div className="overflow-hidden rounded-lg transition-transform duration-700 group-hover:scale-110 h-full">
+                    <img 
+                      src={model.image} 
+                      alt={model.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-700 group-hover:opacity-80"></div>
+                  </div>
+
+                  <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground z-10">
                     {model.category}
                   </Badge>
-                  <div className="absolute top-4 right-4 p-2 bg-card/80 backdrop-blur-sm rounded-full">
+                  <div className="absolute top-4 right-4 p-2 bg-card/80 backdrop-blur-sm rounded-full z-10">
                     <IconComponent className="w-5 h-5 text-primary" />
                   </div>
                 </div>
