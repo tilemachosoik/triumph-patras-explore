@@ -6,7 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
-  const [language, setLanguage] = useState<'en' | 'gr'>('en');
+  const [language, setLanguage] = useState<'en' | 'gr'>('gr');
 
   return (
     <div className="min-h-screen bg-background">
