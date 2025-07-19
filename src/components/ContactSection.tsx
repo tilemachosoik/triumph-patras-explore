@@ -72,7 +72,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
     },
     gr: {
       title: "Επικοινωνήστε μαζί μας",
-      subtitle: "Επισκεφθείτε το Showroom μας ή Κλείστε Δοκιμαστική Βόλτα",
+      subtitle: "Επισκεφθείτε την Έκθεση μας ή Κλείστε Test Ride",
       location: {
         title: "Επισκεφθείτε το Showroom μας",
         address: "Νοταρά 10",
