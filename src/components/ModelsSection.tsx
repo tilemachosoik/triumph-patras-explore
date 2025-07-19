@@ -3,12 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Zap, Mountain, Wrench, Bike, LandPlot, Rocket, Gauge } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import classicsImage from "@/assets/OE_SpeedTwin900_MY25_CW4I2117_GE.jpg";
-import adventureImage from "@/assets/Triumph_Tiger_900_GTPRO__Road_Statics_2024_011.jpg";
-import roadstersImage from "@/assets/Triumph_MY23_Street_Triple_RS_Static_09.jpg";
-import offroadImage from "@/assets/TF_250X_MY26_0004.jpg";
-import rocketImage from "@/assets/Rocket3R_Evel-Knievel_MY25_003.jpg";
-import sportImage from "@/assets/Triumph-Daytona-660-Statics37.jpg";
+import classicsImage from "@/assets/OE_SpeedTwin900_MY25_CW4I2117_GE.webp";
+import adventureImage from "@/assets/Triumph_Tiger_900_GTPRO__Road_Statics_2024_011.webp";
+import roadstersImage from "@/assets/Triumph_MY23_Street_Triple_RS_Static_09.webp";
+import offroadImage from "@/assets/TF_250X_MY26_0004.webp";
+import rocketImage from "@/assets/Rocket3R_Evel-Knievel_MY25_003.webp";
+import sportImage from "@/assets/Triumph-Daytona-660-Statics37.webp";
 
 interface ModelsSectionProps {
   language: 'en' | 'gr';
