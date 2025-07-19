@@ -40,13 +40,13 @@ const HeroSection = ({ language }: HeroSectionProps) => {
   return (
     <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Background with overlay */}
-      <div className="absolute inset-0 bg-gradient-hero">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <img 
-          src={heroImage} 
-          alt="Triumph Motorcycle"
-          className="w-full h-full object-cover opacity-60"
-        />
+      <div className="absolute inset-0">
+          <img 
+            src={heroImage} 
+            alt="Triumph Motorcycle"
+            className="w-full h-full object-cover"
+          />
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       {/* Content */}
@@ -61,7 +61,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white drop-shadow-lg">
             {t.title}
           </h1>
           
@@ -70,7 +70,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
           </h2>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white drop-shadow mb-12 max-w-2xl mx-auto leading-relaxed">
             {t.description}
           </p>
 
