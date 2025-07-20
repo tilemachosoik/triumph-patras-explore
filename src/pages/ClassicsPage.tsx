@@ -94,7 +94,7 @@ const ClassicsPage = ({ language = 'en' }: ClassicsPageProps) => {
         id: "speed-twin-900",
         name: currentLanguage === 'en' ? "Speed Twin 900" : "Speed Twin 900",
         price: "10.490,00 €",
-        baseImage: "speedTwin900Image",
+        baseImage: "speedTwin900SilverImage",
         isNew: true,
         colors: [
           { name: "Aluminium Silver / Carnival Red / Jet Black", price: "10.490,00 €", image: "speedTwin900SilverImage" },
