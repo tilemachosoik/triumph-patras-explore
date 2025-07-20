@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
-interface Rocket3PageProps {
-  language?: 'en' | 'gr';
-}
-
-const Rocket3Page = ({ language = 'en' }: Rocket3PageProps) => {
-  const [currentLanguage, setCurrentLanguage] = useState<'en' | 'gr'>(language);
+const Rocket3Page = () => {
+  const { language: currentLanguage } = useLanguage();
   const navigate = useNavigate();
 
   const content = {
@@ -90,7 +87,7 @@ const Rocket3Page = ({ language = 'en' }: Rocket3PageProps) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar language={currentLanguage} onLanguageChange={setCurrentLanguage} />
+      <Navbar />
       
       <div className="container mx-auto px-4 py-8 mt-20">
         <div className="mb-8">

@@ -2,16 +2,20 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Languages, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import triumphLogo from "@/assets/logo.png";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface NavbarProps {
-  language: 'en' | 'gr';
-  onLanguageChange: (lang: 'en' | 'gr') => void;
+  // No longer need props for language since we use context
 }
 
-const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
+const Navbar = ({}: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
 
   const content = {
     en: {
@@ -35,9 +39,14 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
   const t = content[language];
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (isHomePage) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page and scroll to section
+      navigate(`/#${id}`);
     }
     setIsOpen(false);
   };
@@ -91,7 +100,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => onLanguageChange(language === 'en' ? 'gr' : 'en')}
+            onClick={() => setLanguage(language === 'en' ? 'gr' : 'en')}
             className="flex items-center space-x-1"
           >
             <Languages className="w-4 h-4" />
@@ -149,7 +158,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               <div className="border-t border-border pt-6 space-y-4">
                 <Button
                   variant="outline"
-                  onClick={() => onLanguageChange(language === 'en' ? 'gr' : 'en')}
+                  onClick={() => setLanguage(language === 'en' ? 'gr' : 'en')}
                   className="w-full justify-start"
                 >
                   <Languages className="w-4 h-4 mr-2" />

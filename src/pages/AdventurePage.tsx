@@ -1,41 +1,33 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
-// Placeholder images - to be replaced with actual images
-import adventureImage from "@/assets/tiger.jpg";
-
-interface AdventurePageProps {
-  language?: 'en' | 'gr';
-}
-
-const AdventurePage = ({ language = 'en' }: AdventurePageProps) => {
-  const [currentLanguage, setCurrentLanguage] = useState<'en' | 'gr'>(language);
+const AdventurePage = () => {
+  const { language: currentLanguage } = useLanguage();
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
   const navigate = useNavigate();
 
   const content = {
     en: {
       title: "Adventure",
-      subtitle: "Explore a world of adventure, with motorcycles built to always reach the end of the road, ready to go anywhere and achieve anything.",
+      subtitle: "Built for exploration and long-distance touring, engineered to conquer any terrain.",
       backButton: "Back to Models",
       configureButton: "Configure",
       detailsButton: "View Details",
-      priceFrom: "From",
-      newBadge: "NEW"
+      priceFrom: "From"
     },
     gr: {
       title: "Adventure",
-      subtitle: "Εξερευνήστε έναν κόσμο περιπέτειας, με μοτοσικλέτες κατασκευασμένες ώστε να φτάνουν πάντα στο τέλος της διαδρομής, έτοιμες να φτάσουν παντού και να καταφέρουν τα πάντα.",
+      subtitle: "Κατασκευασμένες για εξερεύνηση και ταξίδια μεγάλων αποστάσεων, σχεδιασμένες για να κατακτήσουν κάθε έδαφος.",
       backButton: "Επιστροφή στα Μοντέλα",
       configureButton: "Διαμόρφωση",
       detailsButton: "Προβολή Λεπτομερειών",
-      priceFrom: "Από",
-      newBadge: "ΝΕΟ"
+      priceFrom: "Από"
     }
   };
 
@@ -45,28 +37,30 @@ const AdventurePage = ({ language = 'en' }: AdventurePageProps) => {
       name: "Tiger Sport 660",
       price: "9.790,00 €",
       baseImage: "tigerSport660Image",
-      isNew: true,
       colors: [
-        { name: "Roulette Green", price: "9.790,00 €", image: "tigerSport660GreenImage" },
-        { name: "Jet Black", price: "9.790,00 €", image: "tigerSport660BlackImage" }
+        { name: "Sapphire Black", price: "9.790,00 €", image: "tigerSport660BlackImage" },
+        { name: "Crystal White", price: "9.990,00 €", image: "tigerSport660WhiteImage" },
+        { name: "Carnival Red", price: "9.990,00 €", image: "tigerSport660RedImage" },
+        { name: "Roulette Green", price: "9.990,00 €", image: "tigerSport660GreenImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["660cc triple engine", "Class-leading capabilities and road behavior", "Showa remote-adjustment suspension"]
-        : ["660cc triple engine", "Κορυφαίες για την κατηγορία δυνατότητες και οδική συμπεριφορά", "ανάρτησης Showa απομακρυσμένης ρύθμισης"]
+        ? ["675cc triple engine", "81 PS power", "Sport-touring comfort"]
+        : ["675κ.εκ. τρικύλινδρος κινητήρας", "81 PS ιπποδύναμη", "Sport-touring άνεση"]
     },
     {
       id: "tiger-sport-800",
       name: "Tiger Sport 800",
       price: "11.990,00 €",
       baseImage: "tigerSport800Image",
-      isNew: true,
       colors: [
-        { name: "Cosmic Yellow", price: "11.990,00 €", image: "tigerSport800YellowImage" },
-        { name: "Jet Black", price: "11.990,00 €", image: "tigerSport800BlackImage" }
+        { name: "Graphite / Sapphire Black", price: "11.990,00 €", image: "tigerSport800GraphiteImage" },
+        { name: "Cosmic Yellow / Sapphire Black", price: "12.190,00 €", image: "tigerSport800YellowImage" },
+        { name: "Caspian Blue / Sapphire Black", price: "12.190,00 €", image: "tigerSport800BlueImage" },
+        { name: "Sapphire Black", price: "12.190,00 €", image: "tigerSport800BlackImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["800cc Engine", "Road, Rain and Sport riding modes", "Over 40 Genuine Triumph Accessories"]
-        : ["800κ.εκ. Κυβισμοσ κινητηρα", "Προγράμματα οδήγησης Δρόμου, Βροχής και Σπορ", "Περισσότερα από 40 Γνήσια Αξεσουάρ Triumph"]
+        ? ["800cc triple engine", "95 PS power", "Enhanced touring capability"]
+        : ["800κ.εκ. τρικύλινδρος κινητήρας", "95 PS ιπποδύναμη", "Βελτιωμένη touring ικανότητα"]
     },
     {
       id: "tiger-900-gt",
@@ -74,12 +68,14 @@ const AdventurePage = ({ language = 'en' }: AdventurePageProps) => {
       price: "14.490,00 €",
       baseImage: "tiger900GtImage",
       colors: [
-        { name: "Graphite", price: "14.490,00 €", image: "tiger900GtGraphiteImage" },
-        { name: "Sandstorm", price: "14.490,00 €", image: "tiger900GtSandstormImage" }
+        { name: "Sapphire Black", price: "14.490,00 €", image: "tiger900GtBlackImage" },
+        { name: "Carnival Red / Sapphire Black", price: "14.650,00 €", image: "tiger900GtRedImage" },
+        { name: "Snowdonia White / Sapphire Black", price: "14.650,00 €", image: "tiger900GtWhiteImage" },
+        { name: "Ash Grey/Intense Orange", price: "17.250,00 €", image: "tiger900GtGreyImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["900cc triple engine", "Road setup for urban adventures", "Comfortable and agile riding"]
-        : ["900κ.εκ. τρικύλινδρος κινητήρας", "Στήσιμο για άσφαλτο, για αστικές περιπέτειες", "Άνετη και ευέλικτη οδήγηση"]
+        ? ["888cc triple engine", "95 PS power", "GT comfort and touring"]
+        : ["888κ.εκ. τρικύλινδρος κινητήρας", "95 PS ιπποδύναμη", "GT άνεση και touring"]
     },
     {
       id: "tiger-900-gt-pro",
@@ -87,25 +83,28 @@ const AdventurePage = ({ language = 'en' }: AdventurePageProps) => {
       price: "16.490,00 €",
       baseImage: "tiger900GtProImage",
       colors: [
-        { name: "Graphite", price: "16.490,00 €", image: "tiger900GtProGraphiteImage" },
-        { name: "Sandstorm", price: "16.490,00 €", image: "tiger900GtProSandstormImage" }
+        { name: "Carnival Red / Sapphire Black", price: "16.490,00 €", image: "tiger900GtProRedImage" },
+        { name: "Graphite / Sapphire Black", price: "16.650,00 €", image: "tiger900GtProGraphiteImage" },
+        { name: "Snowdonia White / Sapphire Black", price: "16.490,00 €", image: "tiger900GtProWhiteImage" },
+        { name: "Ash Grey/Intense Orange", price: "17.490,00 €", image: "tiger900GtProGreyImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["900cc triple engine", "Advanced electronics", "Premium touring setup"]
-        : ["900κ.εκ. τρικύλινδρος κινητήρας", "Προηγμένα ηλεκτρονικά", "Premium touring εξοπλισμός"]
+        ? ["888cc triple engine", "95 PS power", "Premium GT features"]
+        : ["888κ.εκ. τρικύλινδρος κινητήρας", "95 PS ιπποδύναμη", "Premium GT χαρακτηριστικά"]
     },
     {
       id: "tiger-900-rally-pro",
       name: "Tiger 900 Rally Pro",
-      price: "18.490,00 €",
+      price: "17.290,00 €",
       baseImage: "tiger900RallyProImage",
       colors: [
-        { name: "Sandstorm", price: "18.490,00 €", image: "tiger900RallyProSandstormImage" },
-        { name: "Graphite", price: "18.490,00 €", image: "tiger900RallyProGraphiteImage" }
+        { name: "Matt Khaki Green / Matt Phantom Black", price: "17.290,00 €", image: "tiger900RallyProKhakiImage" },
+        { name: "Carbón Black / Sapphire Black", price: "21.550,00 €", image: "tiger900RallyProBlackImage" },
+        { name: "Matt Sandstorm", price: "21.290,00 €", image: "tiger900RallyProSandstormImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["900cc triple engine", "21\" front wheel", "Off-road suspension setup"]
-        : ["900κ.εκ. τρικύλινδρος κινητήρας", "21\" μπροστινός τροχός", "Off-road εξοπλισμός ανάρτησης"]
+        ? ["888cc triple engine", "95 PS power", "Rally-tuned suspension"]
+        : ["888κ.εκ. τρικύλινδρος κινητήρας", "95 PS ιπποδύναμη", "Rally-tuned ανάρτηση"]
     },
     {
       id: "tiger-1200-gt-pro",
@@ -113,51 +112,54 @@ const AdventurePage = ({ language = 'en' }: AdventurePageProps) => {
       price: "20.990,00 €",
       baseImage: "tiger1200GtProImage",
       colors: [
-        { name: "Carnival Red", price: "20.990,00 €", image: "tiger1200GtProRedImage" },
-        { name: "Graphite", price: "20.990,00 €", image: "tiger1200GtProGraphiteImage" }
+        { name: "Sapphire Black", price: "20.990,00 €", image: "tiger1200GtProBlackImage" },
+        { name: "Carnival Red", price: "21.190,00 €", image: "tiger1200GtProRedImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["1,160cc T-plane triple engine", "Premium road touring", "3 Year Warranty"]
-        : ["1.160 κ.εκ T-plane triple κινητηρασ", "Premium road touring", "3 Χρονια Εγγυηση"]
+        ? ["1160cc triple engine", "141 PS power", "Premium adventure touring"]
+        : ["1160κ.εκ. τρικύλινδρος κινητήρας", "141 PS ιπποδύναμη", "Premium adventure touring"]
     },
     {
       id: "tiger-1200-rally-pro",
       name: "Tiger 1200 Rally Pro",
-      price: "22.990,00 €",
+      price: "21.990,00 €",
       baseImage: "tiger1200RallyProImage",
       colors: [
-        { name: "Sandstorm", price: "22.990,00 €", image: "tiger1200RallyProSandstormImage" },
-        { name: "Graphite", price: "22.990,00 €", image: "tiger1200RallyProGraphiteImage" }
+        { name: "Matt Sandstorm", price: "21.990,00 €", image: "tiger1200RallyProSandstormImage" },
+        { name: "Jet Black", price: "21.990,00 €", image: "tiger1200RallyProBlackImage" },
+        { name: "Matt Khaki", price: "22.290,00 €", image: "tiger1200RallyProKhakiImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["1,160cc T-plane triple engine", "21\" front wheel", "Rally suspension"]
-        : ["1.160 κ.εκ T-plane triple κινητηρασ", "21\" μπροστινός τροχός", "Rally ανάρτηση"]
+        ? ["1160cc triple engine", "141 PS power", "Off-road focused rally setup"]
+        : ["1160κ.εκ. τρικύλινδρος κινητήρας", "141 PS ιπποδύναμη", "Off-road εστιασμένο rally setup"]
     },
     {
       id: "tiger-1200-gt-explorer",
-      name: "Tiger 1200 GT Explorer",
-      price: "24.990,00 €",
+      name: "Tiger 1200 GT Explorer MY25",
+      price: "22.990,00 €",
       baseImage: "tiger1200GtExplorerImage",
       colors: [
-        { name: "Sandstorm", price: "24.990,00 €", image: "tiger1200GtExplorerSandstormImage" },
-        { name: "Graphite", price: "24.990,00 €", image: "tiger1200GtExplorerGraphiteImage" }
+        { name: "Snowdonia White", price: "22.990,00 €", image: "tiger1200GtExplorerWhiteImage" },
+        { name: "Sapphire Black", price: "23.190,00 €", image: "tiger1200GtExplorerBlackImage" },
+        { name: "Carnival Red", price: "23.290,00 €", image: "tiger1200GtExplorerRedImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["1,160cc T-plane triple engine", "Full adventure touring setup", "Premium accessories included"]
-        : ["1.160 κ.εκ T-plane triple κινητηρασ", "Πλήρης adventure touring εξοπλισμός", "Premium αξεσουάρ περιλαμβάνονται"]
+        ? ["1160cc triple engine", "141 PS power", "Maximum touring capacity"]
+        : ["1160κ.εκ. τρικύλινδρος κινητήρας", "141 PS ιπποδύναμη", "Μέγιστη touring χωρητικότητα"]
     },
     {
       id: "tiger-1200-rally-explorer",
-      name: "Tiger 1200 Rally Explorer",
-      price: "26.990,00 €",
+      name: "Tiger 1200 Rally Explorer MY25",
+      price: "23.990,00 €",
       baseImage: "tiger1200RallyExplorerImage",
       colors: [
-        { name: "Sandstorm", price: "26.990,00 €", image: "tiger1200RallyExplorerSandstormImage" },
-        { name: "Graphite", price: "26.990,00 €", image: "tiger1200RallyExplorerGraphiteImage" }
+        { name: "Matt Sandstorm", price: "23.990,00 €", image: "tiger1200RallyExplorerSandstormImage" },
+        { name: "Jet Black", price: "23.990,00 €", image: "tiger1200RallyExplorerBlackImage" },
+        { name: "Matt Khaki", price: "24.290,00 €", image: "tiger1200RallyExplorerKhakiImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["1,160cc T-plane triple engine", "21\" front wheel", "Full rally setup with accessories"]
-        : ["1.160 κ.εκ T-plane triple κινητηρασ", "21\" μπροστινός τροχός", "Πλήρης rally εξοπλισμός με αξεσουάρ"]
+        ? ["1160cc triple engine", "141 PS power", "Ultimate adventure capability"]
+        : ["1160κ.εκ. τρικύλινδρος κινητήρας", "141 PS ιπποδύναμη", "Απόλυτη adventure ικανότητα"]
     }
   ];
 
@@ -174,7 +176,7 @@ const AdventurePage = ({ language = 'en' }: AdventurePageProps) => {
       const colorOption = model.colors.find((c: any) => c.name === selectedColor);
       if (colorOption) return colorOption.image;
     }
-    return model.baseImage || adventureImage;
+    return model.baseImage;
   };
 
   const getModelPrice = (model: any) => {
@@ -188,7 +190,7 @@ const AdventurePage = ({ language = 'en' }: AdventurePageProps) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar language={currentLanguage} onLanguageChange={setCurrentLanguage} />
+      <Navbar />
       
       <div className="container mx-auto px-4 py-8 mt-20">
         <div className="mb-8">
@@ -216,11 +218,6 @@ const AdventurePage = ({ language = 'en' }: AdventurePageProps) => {
                   alt={model.name}
                   className="w-full h-48 object-cover"
                 />
-                <div className="absolute top-2 right-2">
-                  {model.isNew && (
-                    <Badge variant="destructive">{content[currentLanguage].newBadge}</Badge>
-                  )}
-                </div>
               </div>
               
               <CardHeader>

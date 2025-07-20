@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,12 +10,8 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 // Placeholder images - to be replaced with actual images
 import offRoadImage from "@/assets/hero-motorcycle.jpg";
 
-interface OffRoadPageProps {
-  language?: 'en' | 'gr';
-}
-
-const OffRoadPage = ({ language = 'en' }: OffRoadPageProps) => {
-  const [currentLanguage, setCurrentLanguage] = useState<'en' | 'gr'>(language);
+const OffRoadPage = () => {
+  const { language: currentLanguage } = useLanguage();
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
   const navigate = useNavigate();
 
@@ -123,7 +120,7 @@ const OffRoadPage = ({ language = 'en' }: OffRoadPageProps) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar language={currentLanguage} onLanguageChange={setCurrentLanguage} />
+      <Navbar />
       
       <div className="container mx-auto px-4 py-8 mt-20">
         <div className="mb-8">

@@ -1,41 +1,33 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
-// Placeholder images - to be replaced with actual images
-import roadstersImage from "@/assets/speed-triple.jpg";
-
-interface RoadstersPageProps {
-  language?: 'en' | 'gr';
-}
-
-const RoadstersPage = ({ language = 'en' }: RoadstersPageProps) => {
-  const [currentLanguage, setCurrentLanguage] = useState<'en' | 'gr'>(language);
+const RoadstersPage = () => {
+  const { language: currentLanguage } = useLanguage();
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
   const navigate = useNavigate();
 
   const content = {
     en: {
       title: "Roadsters",
-      subtitle: "Triumph builds pioneering motorcycles and incredible triple engines with emphasis on power, torque and instant response.",
+      subtitle: "Pure performance machines delivering adrenaline-pumping power and precision handling.",
       backButton: "Back to Models",
       configureButton: "Configure",
-      detailsButton: "View Details",
-      priceFrom: "From",
-      newBadge: "NEW"
+      detailsButton: "View Details", 
+      priceFrom: "From"
     },
     gr: {
       title: "Roadsters",
-      subtitle: "Η Triumph κατασκευάζει πρωτοποριακές μοτοσικλέτες και απίστευτους τρικύλινδρους κινητήρες με έμφαση στην ισχύ, τη ροπή και την άμεση απόκριση.",
+      subtitle: "Καθαρές μηχανές απόδοσης που προσφέρουν δύναμη που κόβει την ανάσα και ακριβή χειρισμό.",
       backButton: "Επιστροφή στα Μοντέλα",
       configureButton: "Διαμόρφωση",
       detailsButton: "Προβολή Λεπτομερειών",
-      priceFrom: "Από",
-      newBadge: "ΝΕΟ"
+      priceFrom: "Από"
     }
   };
 
@@ -43,57 +35,72 @@ const RoadstersPage = ({ language = 'en' }: RoadstersPageProps) => {
     {
       id: "trident-660",
       name: "Trident 660",
-      price: "8.990,00 €",
+      price: "9.290,00 €",
       baseImage: "trident660Image",
       colors: [
-        { name: "Sapphire Black", price: "8.990,00 €", image: "trident660BlackImage" },
-        { name: "Crystal White", price: "8.990,00 €", image: "trident660WhiteImage" },
-        { name: "Silver Ice", price: "8.990,00 €", image: "trident660SilverImage" }
+        { name: "Jet Black / Sapphire Blue", price: "9.290,00 €", image: "trident660BlackImage" },
+        { name: "Cosmic Yellow / Sapphire Blue", price: "9.290,00 €", image: "trident660YellowImage" },
+        { name: "Cobalt Blue / Sapphire Black", price: "9.450,00 €", image: "trident660BlueImage" },
+        { name: "Silver Ice", price: "9.450,00 €", image: "trident660SilverImage" },
+        { name: "Matt Baja Orange", price: "12.190,00 €", image: "trident660OrangeImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["660cc triple engine", "81 PS Max Power", "64 NM Max Torque"]
-        : ["660κ.εκ. τρικύλινδρος κινητήρας", "81 PS Μέγιστη Ιπποδύναμη", "64 NM Μέγιστη Ροπή"]
+        ? ["675cc triple engine", "81 PS power", "64 NM torque"]
+        : ["675κ.εκ. τρικύλινδρος κινητήρας", "81 PS ιπποδύναμη", "64 NM ροπή"]
     },
     {
-      id: "street-triple-765-r",
-      name: "Street Triple 765 R",
-      price: "12.990,00 €",
-      baseImage: "streetTriple765RImage",
+      id: "street-triple-r",
+      name: "Street Triple R",
+      price: "11.990,00 €",
+      baseImage: "streetTripleRImage", 
       colors: [
-        { name: "Jet Black", price: "12.990,00 €", image: "streetTriple765RBlackImage" },
-        { name: "Racing Yellow", price: "12.990,00 €", image: "streetTriple765RYellowImage" }
+        { name: "Jet Black", price: "11.990,00 €", image: "streetTripleRBlackImage" },
+        { name: "Crystal White", price: "12.190,00 €", image: "streetTripleRWhiteImage" },
+        { name: "Silver Ice", price: "13.990,00 €", image: "streetTripleRSilverImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["765cc triple engine", "118 PS Max Power", "77 NM Max Torque"]
-        : ["765κ.εκ. τρικύλινδρος κινητήρας", "118 PS Μέγιστη Ιπποδύναμη", "77 NM Μέγιστη Ροπή"]
+        ? ["765cc triple engine", "118 PS power", "77 NM torque"] 
+        : ["765κ.εκ. τρικύλινδρος κινητήρας", "118 PS ιπποδύναμη", "77 NM ροπή"]
     },
     {
-      id: "street-triple-765-rs",
-      name: "Street Triple 765 RS",
-      price: "14.990,00 €",
-      baseImage: "streetTriple765RsImage",
+      id: "street-triple-rs",
+      name: "Street Triple RS",
+      price: "13.990,00 €",
+      baseImage: "streetTripleRsImage",
       colors: [
-        { name: "Jet Black", price: "14.990,00 €", image: "streetTriple765RsBlackImage" },
-        { name: "Racing Yellow", price: "14.990,00 €", image: "streetTriple765RsYellowImage" },
-        { name: "Crystal White", price: "14.990,00 €", image: "streetTriple765RsWhiteImage" }
+        { name: "Phantom Black", price: "13.990,00 €", image: "streetTripleRsBlackImage" },
+        { name: "Cosmic Yellow", price: "14.190,00 €", image: "streetTripleRsYellowImage" },
+        { name: "Crystal White", price: "14.190,00 €", image: "streetTripleRsWhiteImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["765cc triple engine", "121 PS Max Power", "79 NM Max Torque", "Öhlins suspension"]
-        : ["765κ.εκ. τρικύλινδρος κινητήρας", "121 PS Μέγιστη Ιπποδύναμη", "79 NM Μέγιστη Ροπή", "Ανάρτηση Öhlins"]
+        ? ["765cc triple engine", "121 PS power", "79 NM torque", "Premium Öhlins suspension"]
+        : ["765κ.εκ. τρικύλινδρος κινητήρας", "121 PS ιπποδύναμη", "79 NM ροπή", "Premium Öhlins ανάρτηση"]
     },
     {
-      id: "speed-triple-1200-rs",
-      name: "Speed Triple 1200 RS",
-      price: "18.990,00 €",
-      baseImage: "speedTriple1200RsImage",
+      id: "speed-triple-rs",
+      name: "Speed Triple RS",
+      price: "21.990,00 €",
+      baseImage: "speedTripleRsImage",
       colors: [
-        { name: "Jet Black", price: "18.990,00 €", image: "speedTriple1200RsBlackImage" },
-        { name: "Racing Yellow", price: "18.990,00 €", image: "speedTriple1200RsYellowImage" },
-        { name: "Crystal White", price: "18.990,00 €", image: "speedTriple1200RsWhiteImage" }
+        { name: "Jet Black", price: "21.990,00 €", image: "speedTripleRsBlackImage" },
+        { name: "Granite / Diablo Red", price: "22.290,00 €", image: "speedTripleRsRedImage" },
+        { name: "Granite / Triumph Racing Yellow", price: "22.290,00 €", image: "speedTripleRsYellowImage" }
       ],
       specs: currentLanguage === 'en' 
-        ? ["1160cc triple engine", "180 PS Max Power", "125 NM Max Torque", "Carbon bodywork"]
-        : ["1160κ.εκ. τρικύλινδρος κινητήρας", "180 PS Μέγιστη Ιπποδύναμη", "125 NM Μέγιστη Ροπή", "Αμάξωμα από carbon"]
+        ? ["1160cc triple engine", "177 PS power", "125 NM torque", "Carbon fiber bodywork"]
+        : ["1160κ.εκ. τρικύλινδρος κινητήρας", "177 PS ιπποδύναμη", "125 NM ροπή", "Αμάξωμα carbon fiber"]
+    },
+    {
+      id: "speed-triple-1200-rr",
+      name: "Speed Triple 1200 RR", 
+      price: "23.990,00 €",
+      baseImage: "speedTriple1200RrImage",
+      colors: [
+        { name: "Triumph Performance Yellow", price: "23.990,00 €", image: "speedTriple1200RrYellowImage" }
+      ],
+      specs: currentLanguage === 'en' 
+        ? ["1160cc triple engine", "177 PS power", "125 NM torque", "Track-focused setup"]
+        : ["1160κ.εκ. τρικύλινδρος κινητήρας", "177 PS ιπποδύναμη", "125 NM ροπή", "Εστίαση στην πίστα"]
     }
   ];
 
@@ -110,7 +117,7 @@ const RoadstersPage = ({ language = 'en' }: RoadstersPageProps) => {
       const colorOption = model.colors.find((c: any) => c.name === selectedColor);
       if (colorOption) return colorOption.image;
     }
-    return model.baseImage || roadstersImage;
+    return model.baseImage;
   };
 
   const getModelPrice = (model: any) => {
@@ -124,7 +131,7 @@ const RoadstersPage = ({ language = 'en' }: RoadstersPageProps) => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar language={currentLanguage} onLanguageChange={setCurrentLanguage} />
+      <Navbar />
       
       <div className="container mx-auto px-4 py-8 mt-20">
         <div className="mb-8">
@@ -152,11 +159,6 @@ const RoadstersPage = ({ language = 'en' }: RoadstersPageProps) => {
                   alt={model.name}
                   className="w-full h-48 object-cover"
                 />
-                <div className="absolute top-2 right-2">
-                  {model.isNew && (
-                    <Badge variant="destructive">{content[currentLanguage].newBadge}</Badge>
-                  )}
-                </div>
               </div>
               
               <CardHeader>

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ChevronDown, ChevronUp, Eye } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { useLanguage } from "@/context/LanguageContext";
 
 // Import motorcycle images
 import bonnevilleT100 from "@/assets/OE_SpeedTwin900_MY25_CW4I2117_GE.webp";
@@ -15,7 +16,7 @@ import rocketImage from "@/assets/Rocket3R_Evel-Knievel_MY25_003.webp";
 import sportImage from "@/assets/Triumph-Daytona-660-Statics37.webp";
 
 const AllModelsPage = () => {
-  const [language, setLanguage] = useState<'en' | 'gr'>('en');
+  const { language } = useLanguage();
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['classics']);
   const navigate = useNavigate();
 
@@ -362,7 +363,7 @@ const AllModelsPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar language={language} onLanguageChange={setLanguage} />
+      <Navbar />
       
       <main className="pt-20">
         {/* Header */}
