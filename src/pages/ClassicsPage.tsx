@@ -9,6 +9,9 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 // Placeholder images - to be replaced with actual images
 import classicsImage from "@/assets/bonneville.jpg";
+import speedTwin900SilverImage from "@/assets/speed-twin-900-my25-aluminium-silver-rhs.webp";
+import speedTwin900WhiteImage from "@/assets/speed-twin-900-my25-purewhite-rhs.webp";
+import speedTwin900BlackImage from "@/assets/speed-twin-900-my25-phantom-black-rhs.webp";
 
 interface ClassicsPageProps {
   language?: 'en' | 'gr';
@@ -90,12 +93,13 @@ const ClassicsPage = ({ language = 'en' }: ClassicsPageProps) => {
       {
         id: "speed-twin-900",
         name: currentLanguage === 'en' ? "Speed Twin 900" : "Speed Twin 900",
-        price: "9.390,00 €",
+        price: "10.490,00 €",
         baseImage: "speedTwin900Image",
         isNew: true,
         colors: [
-          { name: "Pure White", price: "9.390,00 €", image: "speedTwin900WhiteImage" },
-          { name: "Matt Graphite", price: "9.390,00 €", image: "speedTwin900GraphiteImage" }
+          { name: "Aluminium Silver / Carnival Red / Jet Black", price: "10.490,00 €", image: "speedTwin900SilverImage" },
+          { name: "Pure White / Maui Blue / Tangerine Orange", price: "10.840,00 €", image: "speedTwin900WhiteImage" },
+          { name: "Phantom Black / Aurum Gold", price: "10.840,00 €", image: "speedTwin900BlackImage" }
         ],
         specs: currentLanguage === 'en' 
           ? ["900cc Engine", "80 NM Max Torque", "65 PS Max Power", "16,000 km Service Interval"]
