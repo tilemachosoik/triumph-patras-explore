@@ -94,12 +94,12 @@ const ClassicsPage = ({ language = 'en' }: ClassicsPageProps) => {
         id: "speed-twin-900",
         name: currentLanguage === 'en' ? "Speed Twin 900" : "Speed Twin 900",
         price: "10.490,00 €",
-        baseImage: "speedTwin900SilverImage",
+        baseImage: speedTwin900SilverImage,
         isNew: true,
         colors: [
-          { name: "Aluminium Silver / Carnival Red / Jet Black", price: "10.490,00 €", image: "speedTwin900SilverImage" },
-          { name: "Pure White / Maui Blue / Tangerine Orange", price: "10.840,00 €", image: "speedTwin900WhiteImage" },
-          { name: "Phantom Black / Aurum Gold", price: "10.840,00 €", image: "speedTwin900BlackImage" }
+          { name: "Aluminium Silver / Carnival Red / Jet Black", price: "10.490,00 €", image: speedTwin900SilverImage },
+          { name: "Pure White / Maui Blue / Tangerine Orange", price: "10.840,00 €", image: speedTwin900WhiteImage },
+          { name: "Phantom Black / Aurum Gold", price: "10.840,00 €", image: speedTwin900BlackImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["900cc Engine", "80 NM Max Torque", "65 PS Max Power", "16,000 km Service Interval"]
