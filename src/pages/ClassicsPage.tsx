@@ -117,8 +117,8 @@ const ClassicsPage = () => {
           { name: "Aluminium Silver", price: "10.840,00 €", image: speedTwin900SilverImage }
         ],
         specs: currentLanguage === 'en' 
-          ? ["900cc Engine", "80 NM Max Torque", "65 PS Max Power", "16,000 km Service Interval"]
-          : ["900κ.εκ. Κινητήρας", "80 NM Μέγιστη Ροπή", "65 PS Μέγιστη Ιπποδύναμη", "16.000 χλμ Διάστημα Service"]
+          ? ["900cc Bonneville Twin", "80 NM Max Torque", "65 PS Max Power", "16,000 km Service Interval"]
+          : ["900κ.εκ. Bonneville Δικύλινδρος", "80 NM Μέγιστη Ροπή", "65 PS Μέγιστη Ιπποδύναμη", "16.000 χλμ Διάστημα Service"]
       },
       {
         id: "scrambler-900",
@@ -133,8 +133,8 @@ const ClassicsPage = () => {
           
         ],
         specs: currentLanguage === 'en' 
-          ? ["900cc Parallel Twin", "65 PS power", "80 NM torque"]
-          : ["900κ.εκ. Παράλληλος Δίκυλινδρος", "65 PS ιπποδύναμη", "80 NM ροπή"]
+          ? ["900cc Bonneville Twin", "65 PS power", "80 NM torque"]
+          : ["900κ.εκ. Bonneville Δίκυλινδρος", "65 PS ιπποδύναμη", "80 NM ροπή"]
       },
       {
         id: "bonneville-t100",
@@ -143,7 +143,7 @@ const ClassicsPage = () => {
         baseImage: bonnevilleT100AluminiumImage,
         colors: [
           { name: "Jet Black", price: "11.490,00 €", image: bonnevilleT100JetBlackImage },
-          { name: "Aluminium", price: "11.840,00 €", image: bonnevilleT100AluminiumImage },
+          { name: "Aluminium / Orange", price: "11.840,00 €", image: bonnevilleT100AluminiumImage },
           { name: "Competition Green", price: "11.840,00 €", image: bonnevilleT100CompetitionGreenImage },
           { name: "Icon Edition", price: "12.090,00 €", image: bonnevilleT100IconImage }
         ],
