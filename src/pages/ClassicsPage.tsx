@@ -9,13 +9,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
 // Import actual images
-import speed400CarnivalRedImage from "@/assets/speed 400_my24_carnival-red_rhs.webp";
-import speed400CaspianBlueImage from "@/assets/speed 400_my24_caspian-blue_rhs.webp";
-import speed400PhantomBlackImage from "@/assets/speed 400_my24_phantom-black_rhs.webp";
+import speed400CarnivalRedImage from "@/assets/speed-400_my24_carnival-red_rhs.webp";
+import speed400CaspianBlueImage from "@/assets/speed-400_my24_caspian-blue_rhs.webp";
+import speed400PhantomBlackImage from "@/assets/speed-400_my24_phantom-black_rhs.webp";
 
-import scrambler400xCarnivalRedImage from "@/assets/scrambler 400 x_my24_carnival-red_rhs.webp";
-import scrambler400xMattKhakiImage from "@/assets/scrambler 400 x_my24_matt-khaki-green_rhs.webp";
-import scrambler400xJetBlackImage from "@/assets/scrambler 400 x_my24_phantom-black_rhs.webp";
+import scrambler400xCarnivalRedImage from "@/assets/scrambler-400-x_my24_carnival-red_rhs.webp";
+import scrambler400xMattKhakiImage from "@/assets/scrambler-400-x_my24_matt-khaki-green_rhs.webp";
+import scrambler400xJetBlackImage from "@/assets/scrambler-400-x_my24_phantom-black_rhs.webp";
 
 import scrambler400xcVanillaWhiteImage from "@/assets/scrambler-400-xc-my25-vanilla-white-rhs-1080.webp";
 import scrambler400xcRacingYellowImage from "@/assets/scrambler-400xc-my25-racing-yellow-rhs-1080.webp";
