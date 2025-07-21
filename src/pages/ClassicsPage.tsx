@@ -55,7 +55,7 @@ const ClassicsPage = () => {
         id: "speed-400",
         name: "Speed 400",
         price: "5.690,00 €",
-        baseImage: "speed400AluminiumSilverImage",
+        baseImage: speed400CarnivalRedImage,
         colors: [
           { name: "Phantom Black", price: "5.690,00 €", image: speed400PhantomBlackImage },
           { name: "Caspian Blue", price: "5.690,00 €", image: speed400CaspianBlueImage },
@@ -69,7 +69,7 @@ const ClassicsPage = () => {
         id: "scrambler-400x",
         name: "Scrambler 400 X",
         price: "6.390,00 €",
-        baseImage: "scrambler400xMattKhakiImage",
+        baseImage: scrambler400xMattKhakiImage,
         colors: [
           { name: "Matt Khaki Green / Pure White", price: "6.390,00 €", image: scrambler400xMattKhakiImage },
           { name: "Carnival Red / Phantom Black", price: "6.390,00 €", image: scrambler400xCarnivalRedImage },
@@ -83,7 +83,7 @@ const ClassicsPage = () => {
         id: "scrambler-400xc",
         name: "Scrambler 400 XC",
         price: "7.150,00 €",
-        baseImage: "scrambler400xcRacingYellowImage",
+        baseImage: scrambler400xcVanillaWhiteImage,
         colors: [
           { name: "Vanilla White", price: "7.150,00 €", image: scrambler400xcVanillaWhiteImage },
           { name: "Racing Yellow", price: "7.275,00 €", image: scrambler400xcRacingYellowImage },
