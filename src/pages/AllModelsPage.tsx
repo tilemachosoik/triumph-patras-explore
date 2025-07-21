@@ -40,36 +40,52 @@ const AllModelsPage = () => {
           description: "Timeless British style meets modern engineering",
           models: [
             {
-              name: "Bonneville T100",
-              price: "€9,700",
-              engine: "900cc Parallel Twin",
-              power: "65 HP",
+              name: "Scrambler 400 X",
+              price: "€6,390",
+              engine: "398cc Single",
+              power: "40 HP",
               image: bonnevilleT100,
-              colors: ["Jet Black", "Cranberry Red", "Matt Ironstone"]
+              colors: ["Phantom Black/Storm Grey", "Caspian Blue/Storm Grey", "Carnival Red/Storm Grey"]
             },
             {
-              name: "Bonneville T120",
-              price: "€11,200",
-              engine: "1200cc Parallel Twin", 
-              power: "80 HP",
+              name: "Scrambler 400 XC",
+              price: "€6,690",
+              engine: "398cc Single",
+              power: "40 HP",
               image: bonnevilleT100,
-              colors: ["Jet Black", "Korosi Red", "Matt Storm Grey"]
+              colors: ["Phantom Black/Storm Grey", "Caspian Blue/Storm Grey", "Carnival Red/Storm Grey"]
             },
             {
-              name: "Speed Twin",
-              price: "€12,500",
+              name: "Speed 400",
+              price: "€5,490",
+              engine: "398cc Single",
+              power: "40 HP",
+              image: bonnevilleT100,
+              colors: ["Phantom Black/Storm Grey", "Caspian Blue/Storm Grey", "Carnival Red/Storm Grey", "Aluminium Silver"]
+            },
+            {
+              name: "Scrambler 1200 XE",
+              price: "€16,990",
               engine: "1200cc Parallel Twin",
-              power: "97 HP", 
+              power: "90 HP",
               image: bonnevilleT100,
-              colors: ["Jet Black", "Matt Storm Grey", "Sapphire Black"]
+              colors: ["Korosi Red/Ironstone", "Matt Khaki Green/Ironstone", "Competition White/Ironstone"]
             },
             {
-              name: "Scrambler 900",
-              price: "€10,200",
+              name: "Speed Twin 900",
+              price: "€12,890",
               engine: "900cc Parallel Twin",
               power: "65 HP",
               image: bonnevilleT100,
-              colors: ["Matt Khaki Green", "Carnival Red", "Jet Black"]
+              colors: ["Aluminium Silver", "Phantom Black", "Pure White"]
+            },
+            {
+              name: "Bonneville Bobber",
+              price: "€16,990",
+              engine: "1200cc Parallel Twin",
+              power: "77 HP",
+              image: bonnevilleT100,
+              colors: ["Jet Black", "Competition Green", "Cranberry Red"]
             }
           ]
         },
@@ -78,28 +94,52 @@ const AllModelsPage = () => {
           description: "Built for exploration and long-distance touring",
           models: [
             {
-              name: "Tiger 900 GT",
-              price: "€13,600",
+              name: "Tiger Sport 660",
+              price: "€9,790",
+              engine: "660cc Triple",
+              power: "81 HP",
+              image: tigerImage,
+              colors: ["Lucerne Blue/Sapphire Black", "Graphite/Silver Ice", "Sapphire Black/Sapphire Black"]
+            },
+            {
+              name: "Tiger Sport 800",
+              price: "€11,990",
+              engine: "800cc Triple",
+              power: "95 HP",
+              image: tigerImage,
+              colors: ["Lucerne Blue/Sapphire Black", "Graphite/Silver Ice", "Korosi Red/Graphite"]
+            },
+            {
+              name: "Tiger 900 GT Pro",
+              price: "€16,990",
               engine: "888cc Triple",
               power: "95 HP",
               image: tigerImage,
-              colors: ["Lucerne Blue", "Graphite", "Korosi Red"]
+              colors: ["Lucerne Blue/Sapphire Black", "Graphite/Silver Ice", "Korosi Red/Graphite"]
             },
             {
-              name: "Tiger 900 Rally",
-              price: "€15,200",
+              name: "Tiger 900 Rally Pro",
+              price: "€18,790",
               engine: "888cc Triple",
-              power: "95 HP", 
+              power: "95 HP",
               image: tigerImage,
-              colors: ["Sandstorm", "Graphite", "Korosi Red"]
+              colors: ["Sandstorm/Sapphire Black", "Graphite/Silver Ice", "Korosi Red/Graphite"]
             },
             {
-              name: "Tiger 1200 GT",
-              price: "€17,800",
+              name: "Tiger 1200 GT Explorer",
+              price: "€20,990",
               engine: "1160cc Triple",
               power: "141 HP",
               image: tigerImage,
-              colors: ["Lucerne Blue", "Jet Black", "Matt Khaki Green"]
+              colors: ["Lucerne Blue/Sapphire Black", "Jet Black/Silver Ice", "Matt Khaki Green/Ironstone"]
+            },
+            {
+              name: "Tiger 1200 Rally Explorer",
+              price: "€23,390",
+              engine: "1160cc Triple",
+              power: "141 HP",
+              image: tigerImage,
+              colors: ["Sandstorm/Sapphire Black", "Jet Black/Silver Ice", "Matt Khaki Green/Ironstone"]
             }
           ]
         },
@@ -108,28 +148,44 @@ const AllModelsPage = () => {
           description: "Pure performance and aggressive styling",
           models: [
             {
-              name: "Street Triple 765 S",
-              price: "€11,900",
-              engine: "765cc Triple",
-              power: "116 HP",
+              name: "Trident 660",
+              price: "€9,290",
+              engine: "660cc Triple",
+              power: "81 HP",
               image: streetTriple,
-              colors: ["Matt Jet Black", "Crystal White", "Diablo Red"]
+              colors: ["Sapphire Black", "Silver Ice/Diablo Red", "Matt Jet Black/Matt Storm Grey"]
             },
             {
-              name: "Street Triple 765 RS",
-              price: "€14,200",
-              engine: "765cc Triple", 
-              power: "121 HP",
+              name: "Street Triple R",
+              price: "€11,990",
+              engine: "765cc Triple",
+              power: "118 HP",
               image: streetTriple,
-              colors: ["Matt Storm Grey", "Crystal White", "Diablo Red"]
+              colors: ["Sapphire Black", "Crystal White/Storm Grey", "Matt Jet Black/Matt Storm Grey"]
+            },
+            {
+              name: "Street Triple RS",
+              price: "€13,990",
+              engine: "765cc Triple", 
+              power: "123 HP",
+              image: streetTriple,
+              colors: ["Sapphire Black", "Crystal White/Storm Grey", "Matt Jet Black/Matt Storm Grey"]
             },
             {
               name: "Speed Triple 1200 RS",
-              price: "€17,900",
+              price: "€21,990",
               engine: "1160cc Triple",
-              power: "177 HP",
+              power: "180 HP",
               image: streetTriple,
-              colors: ["Matt Jet Black", "Crystal White", "Diablo Red"]
+              colors: ["Sapphire Black", "Silver Ice", "Matt Jet Black"]
+            },
+            {
+              name: "Speed Triple 1200 RR",
+              price: "€23,990",
+              engine: "1160cc Triple",
+              power: "180 HP",
+              image: streetTriple,
+              colors: ["Sapphire Black", "Silver Ice", "Crystal White/Storm Grey"]
             }
           ]
         },
@@ -138,20 +194,20 @@ const AllModelsPage = () => {
           description: "Purpose-built for dirt and motocross",
           models: [
             {
-              name: "TF 250-X",
-              price: "€9,200",
+              name: "TF 250-E",
+              price: "€11,490",
               engine: "249cc Single",
               power: "40 HP",
               image: offRoadImage,
-              colors: ["Competition Orange", "Racing Blue"]
+              colors: ["Triumph Racing Yellow/Black/White"]
             },
             {
-              name: "TF 450-X",
-              price: "€10,800",
+              name: "TF 450-E",
+              price: "€12,390",
               engine: "449cc Single",
               power: "50 HP",
               image: offRoadImage,
-              colors: ["Competition Orange", "Racing Blue"]
+              colors: ["Triumph Racing Yellow/Black/White"]
             }
           ]
         },
@@ -160,20 +216,20 @@ const AllModelsPage = () => {
           description: "The world's largest production motorcycle engine",
           models: [
             {
-              name: "Rocket 3 R",
-              price: "€22,900",
-              engine: "2458cc Triple",
-              power: "165 HP",
+              name: "Rocket III R Storm",
+              price: "€28,290",
+              engine: "2500cc Triple",
+              power: "180 NM Torque",
               image: rocketImage,
-              colors: ["Matt Storm Grey", "Jet Black", "Silver Ice"]
+              colors: ["Sapphire Black/Granite", "Satin Pacific Blue/Matt Sapphire Black", "Carnival Red/Sapphire Black", "Granite/Sapphire Black"]
             },
             {
-              name: "Rocket 3 GT",
-              price: "€24,200",
-              engine: "2458cc Triple",
-              power: "165 HP",
+              name: "Rocket III GT Storm",
+              price: "€28,990",
+              engine: "2500cc Triple",
+              power: "180 NM Torque",
               image: rocketImage,
-              colors: ["Phantom Black", "Silver Ice", "Matt Storm Grey"]
+              colors: ["Matt Sapphire Black/Satin Pacific Blue", "Sapphire Black/Carnival Red"]
             }
           ]
         },
@@ -183,11 +239,11 @@ const AllModelsPage = () => {
           models: [
             {
               name: "Daytona 660",
-              price: "€10,900",
+              price: "€9,990",
               engine: "660cc Triple",
               power: "95 HP",
               image: sportImage,
-              colors: ["Racing Yellow", "Crystal White", "Jet Black"]
+              colors: ["Snowdonia White/Sapphire Black", "Satin Granite/Matt Jet Black", "Carnival Red/Sapphire Black"]
             }
           ]
         }
@@ -204,36 +260,52 @@ const AllModelsPage = () => {
           description: "Διαχρονικό βρετανικό στυλ συναντά μοντέρνα μηχανική",
           models: [
             {
-              name: "Bonneville T100",
-              price: "€9,700",
+              name: "Scrambler 400 X",
+              price: "€6,390",
+              engine: "398cc Μονοκύλινδρος",
+              power: "40 HP",
+              image: bonnevilleT100,
+              colors: ["Phantom Black/Storm Grey", "Caspian Blue/Storm Grey", "Carnival Red/Storm Grey"]
+            },
+            {
+              name: "Scrambler 400 XC",
+              price: "€6,690",
+              engine: "398cc Μονοκύλινδρος",
+              power: "40 HP",
+              image: bonnevilleT100,
+              colors: ["Phantom Black/Storm Grey", "Caspian Blue/Storm Grey", "Carnival Red/Storm Grey"]
+            },
+            {
+              name: "Speed 400",
+              price: "€5,490",
+              engine: "398cc Μονοκύλινδρος",
+              power: "40 HP",
+              image: bonnevilleT100,
+              colors: ["Phantom Black/Storm Grey", "Caspian Blue/Storm Grey", "Carnival Red/Storm Grey", "Aluminium Silver"]
+            },
+            {
+              name: "Scrambler 1200 XE",
+              price: "€16,990",
+              engine: "1200cc Παράλληλος Δίκυλος",
+              power: "90 HP",
+              image: bonnevilleT100,
+              colors: ["Korosi Red/Ironstone", "Matt Khaki Green/Ironstone", "Competition White/Ironstone"]
+            },
+            {
+              name: "Speed Twin 900",
+              price: "€12,890",
               engine: "900cc Παράλληλος Δίκυλος",
               power: "65 HP",
               image: bonnevilleT100,
-              colors: ["Jet Black", "Cranberry Red", "Matt Ironstone"]
+              colors: ["Aluminium Silver", "Phantom Black", "Pure White"]
             },
             {
-              name: "Bonneville T120", 
-              price: "€11,200",
+              name: "Bonneville Bobber",
+              price: "€16,990",
               engine: "1200cc Παράλληλος Δίκυλος",
-              power: "80 HP",
+              power: "77 HP",
               image: bonnevilleT100,
-              colors: ["Jet Black", "Korosi Red", "Matt Storm Grey"]
-            },
-            {
-              name: "Speed Twin",
-              price: "€12,500",
-              engine: "1200cc Παράλληλος Δίκυλος",
-              power: "97 HP",
-              image: bonnevilleT100,
-              colors: ["Jet Black", "Matt Storm Grey", "Sapphire Black"]
-            },
-            {
-              name: "Scrambler 900",
-              price: "€10,200",
-              engine: "900cc Παράλληλος Δίκυλος",
-              power: "65 HP",
-              image: bonnevilleT100,
-              colors: ["Matt Khaki Green", "Carnival Red", "Jet Black"]
+              colors: ["Jet Black", "Competition Green", "Cranberry Red"]
             }
           ]
         },
@@ -242,28 +314,52 @@ const AllModelsPage = () => {
           description: "Κατασκευασμένες για εξερεύνηση και ταξίδια μεγάλων αποστάσεων",
           models: [
             {
-              name: "Tiger 900 GT",
-              price: "€13,600",
+              name: "Tiger Sport 660",
+              price: "€9,790",
+              engine: "660cc Τρικύλινδρος",
+              power: "81 HP",
+              image: tigerImage,
+              colors: ["Lucerne Blue/Sapphire Black", "Graphite/Silver Ice", "Sapphire Black/Sapphire Black"]
+            },
+            {
+              name: "Tiger Sport 800",
+              price: "€11,990",
+              engine: "800cc Τρικύλινδρος",
+              power: "95 HP",
+              image: tigerImage,
+              colors: ["Lucerne Blue/Sapphire Black", "Graphite/Silver Ice", "Korosi Red/Graphite"]
+            },
+            {
+              name: "Tiger 900 GT Pro",
+              price: "€16,990",
               engine: "888cc Τρικύλινδρος",
               power: "95 HP",
               image: tigerImage,
-              colors: ["Lucerne Blue", "Graphite", "Korosi Red"]
+              colors: ["Lucerne Blue/Sapphire Black", "Graphite/Silver Ice", "Korosi Red/Graphite"]
             },
             {
-              name: "Tiger 900 Rally",
-              price: "€15,200",
+              name: "Tiger 900 Rally Pro",
+              price: "€18,790",
               engine: "888cc Τρικύλινδρος",
               power: "95 HP",
               image: tigerImage,
-              colors: ["Sandstorm", "Graphite", "Korosi Red"]
+              colors: ["Sandstorm/Sapphire Black", "Graphite/Silver Ice", "Korosi Red/Graphite"]
             },
             {
-              name: "Tiger 1200 GT",
-              price: "€17,800",
+              name: "Tiger 1200 GT Explorer",
+              price: "€20,990",
               engine: "1160cc Τρικύλινδρος",
               power: "141 HP",
               image: tigerImage,
-              colors: ["Lucerne Blue", "Jet Black", "Matt Khaki Green"]
+              colors: ["Lucerne Blue/Sapphire Black", "Jet Black/Silver Ice", "Matt Khaki Green/Ironstone"]
+            },
+            {
+              name: "Tiger 1200 Rally Explorer",
+              price: "€23,390",
+              engine: "1160cc Τρικύλινδρος",
+              power: "141 HP",
+              image: tigerImage,
+              colors: ["Sandstorm/Sapphire Black", "Jet Black/Silver Ice", "Matt Khaki Green/Ironstone"]
             }
           ]
         },
@@ -272,28 +368,44 @@ const AllModelsPage = () => {
           description: "Καθαρή απόδοση και επιθετικό στυλ",
           models: [
             {
-              name: "Street Triple 765 S",
-              price: "€11,900",
-              engine: "765cc Τρικύλινδρος",
-              power: "116 HP",
+              name: "Trident 660",
+              price: "€9,290",
+              engine: "660cc Τρικύλινδρος",
+              power: "81 HP",
               image: streetTriple,
-              colors: ["Matt Jet Black", "Crystal White", "Diablo Red"]
+              colors: ["Sapphire Black", "Silver Ice/Diablo Red", "Matt Jet Black/Matt Storm Grey"]
             },
             {
-              name: "Street Triple 765 RS",
-              price: "€14,200",
+              name: "Street Triple R",
+              price: "€11,990",
               engine: "765cc Τρικύλινδρος",
-              power: "121 HP",
+              power: "118 HP",
               image: streetTriple,
-              colors: ["Matt Storm Grey", "Crystal White", "Diablo Red"]
+              colors: ["Sapphire Black", "Crystal White/Storm Grey", "Matt Jet Black/Matt Storm Grey"]
+            },
+            {
+              name: "Street Triple RS",
+              price: "€13,990",
+              engine: "765cc Τρικύλινδρος", 
+              power: "123 HP",
+              image: streetTriple,
+              colors: ["Sapphire Black", "Crystal White/Storm Grey", "Matt Jet Black/Matt Storm Grey"]
             },
             {
               name: "Speed Triple 1200 RS",
-              price: "€17,900",
+              price: "€21,990",
               engine: "1160cc Τρικύλινδρος",
-              power: "177 HP",
+              power: "180 HP",
               image: streetTriple,
-              colors: ["Matt Jet Black", "Crystal White", "Diablo Red"]
+              colors: ["Sapphire Black", "Silver Ice", "Matt Jet Black"]
+            },
+            {
+              name: "Speed Triple 1200 RR",
+              price: "€23,990",
+              engine: "1160cc Τρικύλινδρος",
+              power: "180 HP",
+              image: streetTriple,
+              colors: ["Sapphire Black", "Silver Ice", "Crystal White/Storm Grey"]
             }
           ]
         },
@@ -302,20 +414,20 @@ const AllModelsPage = () => {
           description: "Σχεδιασμένες ειδικά για χώμα και motocross",
           models: [
             {
-              name: "TF 250-X",
-              price: "€9,200",
+              name: "TF 250-E",
+              price: "€11,490",
               engine: "249cc Μονοκύλινδρος",
               power: "40 HP",
               image: offRoadImage,
-              colors: ["Competition Orange", "Racing Blue"]
+              colors: ["Triumph Racing Yellow/Black/White"]
             },
             {
-              name: "TF 450-X",
-              price: "€10,800",
+              name: "TF 450-E",
+              price: "€12,390",
               engine: "449cc Μονοκύλινδρος",
               power: "50 HP",
               image: offRoadImage,
-              colors: ["Competition Orange", "Racing Blue"]
+              colors: ["Triumph Racing Yellow/Black/White"]
             }
           ]
         },
@@ -324,20 +436,20 @@ const AllModelsPage = () => {
           description: "Ο μεγαλύτερος κινητήρας παραγωγής μοτοσικλέτας στον κόσμο",
           models: [
             {
-              name: "Rocket 3 R",
-              price: "€22,900",
-              engine: "2458cc Τρικύλινδρος",
-              power: "165 HP",
+              name: "Rocket III R Storm",
+              price: "€28,290",
+              engine: "2500cc Τρικύλινδρος",
+              power: "180 NM Ροπή",
               image: rocketImage,
-              colors: ["Matt Storm Grey", "Jet Black", "Silver Ice"]
+              colors: ["Sapphire Black/Granite", "Satin Pacific Blue/Matt Sapphire Black", "Carnival Red/Sapphire Black", "Granite/Sapphire Black"]
             },
             {
-              name: "Rocket 3 GT",
-              price: "€24,200",
-              engine: "2458cc Τρικύλινδρος",
-              power: "165 HP",
+              name: "Rocket III GT Storm",
+              price: "€28,990",
+              engine: "2500cc Τρικύλινδρος",
+              power: "180 NM Ροπή",
               image: rocketImage,
-              colors: ["Phantom Black", "Silver Ice", "Matt Storm Grey"]
+              colors: ["Matt Sapphire Black/Satin Pacific Blue", "Sapphire Black/Carnival Red"]
             }
           ]
         },
@@ -347,11 +459,11 @@ const AllModelsPage = () => {
           models: [
             {
               name: "Daytona 660",
-              price: "€10,900",
+              price: "€9,990",
               engine: "660cc Τρικύλινδρος",
               power: "95 HP",
               image: sportImage,
-              colors: ["Racing Yellow", "Crystal White", "Jet Black"]
+              colors: ["Snowdonia White/Sapphire Black", "Satin Granite/Matt Jet Black", "Carnival Red/Sapphire Black"]
             }
           ]
         }
