@@ -17,7 +17,7 @@ import sportImage from "@/assets/Triumph-Daytona-660-Statics37.webp";
 
 const AllModelsPage = () => {
   const { language } = useLanguage();
-  const [expandedCategories, setExpandedCategories] = useState<string | null>(null);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>(['classics']);
   const navigate = useNavigate();
 
   const toggleCategory = (category: string) => {
