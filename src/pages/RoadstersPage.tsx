@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const RoadstersPage = () => {
@@ -36,13 +35,19 @@ const RoadstersPage = () => {
       id: "trident-660",
       name: "Trident 660",
       price: "9.290,00 €",
-      baseImage: "trident660Image",
+      baseImage: "trident660JetBlackImage",
       colors: [
-        { name: "Jet Black / Sapphire Blue", price: "9.290,00 €", image: "trident660BlackImage" },
-        { name: "Cosmic Yellow / Sapphire Blue", price: "9.290,00 €", image: "trident660YellowImage" },
-        { name: "Cobalt Blue / Sapphire Black", price: "9.450,00 €", image: "trident660BlueImage" },
-        { name: "Silver Ice", price: "9.450,00 €", image: "trident660SilverImage" },
-        { name: "Matt Baja Orange", price: "12.190,00 €", image: "trident660OrangeImage" }
+        { name: "Jet Black", price: "9.290,00 €", image: "trident660JetBlackImage" },
+        { name: "Diablo Red / Sapphire Black", price: "9.490,00 €", image: "trident660DiabloRedImage" },
+        { name: "Cosmic Yellow / Sapphire Black", price: "9.490,00 €", image: "trident660CosmicYellowImage" },
+        { name: "Cobalt Blue / Sapphire Black", price: "9.490,00 €", image: "trident660CobaltBlueImage" },
+        { name: "Matt Baja Orange", price: "9.490,00 €", image: "trident660MattBajaOrangeImage" },
+        { name: "Pure White", price: "9.490,00 €", image: "trident660PureWhiteImage" },
+        { name: "Crystal White", price: "9.490,00 €", image: "trident660CrystalWhiteImage" },
+        { name: "Silver Ice", price: "9.590,00 €", image: "trident660SilverIceImage" },
+        { name: "Phantom Black", price: "9.590,00 €", image: "trident660PhantomBlackImage" },
+        { name: "Cosmic Yellow", price: "9.590,00 €", image: "trident660CosmicYellowSolidImage" },
+        { name: "Carnival Red", price: "9.590,00 €", image: "trident660CarnivalRedImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["675cc triple engine", "81 PS power", "64 NM torque"]
@@ -52,11 +57,11 @@ const RoadstersPage = () => {
       id: "street-triple-r",
       name: "Street Triple R",
       price: "11.990,00 €",
-      baseImage: "streetTripleRImage", 
+      baseImage: "streetTripleRJetBlackImage", 
       colors: [
-        { name: "Jet Black", price: "11.990,00 €", image: "streetTripleRBlackImage" },
-        { name: "Crystal White", price: "12.190,00 €", image: "streetTripleRWhiteImage" },
-        { name: "Silver Ice", price: "13.990,00 €", image: "streetTripleRSilverImage" }
+        { name: "Jet Black", price: "11.990,00 €", image: "streetTripleRJetBlackImage" },
+        { name: "Crystal White", price: "12.190,00 €", image: "streetTripleRCrystalWhiteImage" },
+        { name: "Silver Ice", price: "12.190,00 €", image: "streetTripleRSilverIceImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["765cc triple engine", "118 PS power", "77 NM torque"] 
@@ -66,25 +71,25 @@ const RoadstersPage = () => {
       id: "street-triple-rs",
       name: "Street Triple RS",
       price: "13.990,00 €",
-      baseImage: "streetTripleRsImage",
+      baseImage: "streetTripleRsPhantomBlackImage",
       colors: [
-        { name: "Phantom Black", price: "13.990,00 €", image: "streetTripleRsBlackImage" },
-        { name: "Cosmic Yellow", price: "14.190,00 €", image: "streetTripleRsYellowImage" },
-        { name: "Crystal White", price: "14.190,00 €", image: "streetTripleRsWhiteImage" }
+        { name: "Phantom Black", price: "13.990,00 €", image: "streetTripleRsPhantomBlackImage" },
+        { name: "Cosmic Yellow", price: "14.190,00 €", image: "streetTripleRsCosmicYellowImage" },
+        { name: "Carnival Red", price: "14.190,00 €", image: "streetTripleRsCarnivalRedImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["765cc triple engine", "121 PS power", "79 NM torque", "Premium Öhlins suspension"]
         : ["765κ.εκ. τρικύλινδρος κινητήρας", "121 PS ιπποδύναμη", "79 NM ροπή", "Premium Öhlins ανάρτηση"]
     },
     {
-      id: "speed-triple-rs",
-      name: "Speed Triple RS",
+      id: "speed-triple-1200-rs",
+      name: "Speed Triple 1200 RS",
       price: "21.990,00 €",
-      baseImage: "speedTripleRsImage",
+      baseImage: "speedTriple1200RsJetBlackImage",
       colors: [
-        { name: "Jet Black", price: "21.990,00 €", image: "speedTripleRsBlackImage" },
-        { name: "Granite / Diablo Red", price: "22.290,00 €", image: "speedTripleRsRedImage" },
-        { name: "Granite / Triumph Racing Yellow", price: "22.290,00 €", image: "speedTripleRsYellowImage" }
+        { name: "Jet Black", price: "21.990,00 €", image: "speedTriple1200RsJetBlackImage" },
+        { name: "Granite / Diablo Red", price: "22.290,00 €", image: "speedTriple1200RsGraniteRedImage" },
+        { name: "Granite / Triumph Racing Yellow", price: "22.290,00 €", image: "speedTriple1200RsGraniteYellowImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["1160cc triple engine", "177 PS power", "125 NM torque", "Carbon fiber bodywork"]
@@ -94,9 +99,9 @@ const RoadstersPage = () => {
       id: "speed-triple-1200-rr",
       name: "Speed Triple 1200 RR", 
       price: "23.990,00 €",
-      baseImage: "speedTriple1200RrImage",
+      baseImage: "speedTriple1200RrTriumphPerformanceYellowImage",
       colors: [
-        { name: "Triumph Performance Yellow", price: "23.990,00 €", image: "speedTriple1200RrYellowImage" }
+        { name: "Triumph Performance Yellow", price: "23.990,00 €", image: "speedTriple1200RrTriumphPerformanceYellowImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["1160cc triple engine", "177 PS power", "125 NM torque", "Track-focused setup"]
@@ -177,7 +182,6 @@ const RoadstersPage = () => {
                   </ul>
                 )}
                 
-                {/* Color Selection */}
                 <div className="mb-4">
                   <p className="text-sm font-medium mb-2">Available Colors:</p>
                   <div className="flex flex-wrap gap-2">

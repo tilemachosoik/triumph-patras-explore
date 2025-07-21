@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -33,26 +34,28 @@ const Rocket3Page = () => {
 
   const models = [
     {
-      id: "rocket-3-storm-r",
-      name: "Rocket 3 Storm R",
+      id: "rocket-3-r-storm",
+      name: "Rocket III R Storm",
       price: "28.290,00 €",
-      baseImage: "rocket3StormRImage",
+      baseImage: "rocket3RStormSapphireBlackImage",
       colors: [
-        { name: "Matt Silver Ice", price: "28.290,00 €", image: "rocket3StormRSilverImage" },
-        { name: "Jet Black", price: "28.290,00 €", image: "rocket3StormRBlackImage" }
+        { name: "Sapphire Black / Granite", price: "28.290,00 €", image: "rocket3RStormSapphireBlackImage" },
+        { name: "Satin Pacific Blue / Matt Sapphire Black", price: "28.590,00 €", image: "rocket3RStormSatinPacificBlueImage" },
+        { name: "Carnival Red / Sapphire Black", price: "28.590,00 €", image: "rocket3RStormCarnivalRedImage" },
+        { name: "Granite / Sapphire Black", price: "28.590,00 €", image: "rocket3RStormGraniteImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["2500cc Rocket triple engine", "Ultimate high performance roadster", "180 NM Max Torque"]
         : ["2500cc Rocket triple engine", "Ultimate high performance roadster", "180 NM Μέγιστη Ροπή"]
     },
     {
-      id: "rocket-3-storm-gt",
-      name: "Rocket 3 Storm GT",
-      price: "30.290,00 €",
-      baseImage: "rocket3StormGtImage",
+      id: "rocket-3-gt-storm",
+      name: "Rocket III GT Storm",
+      price: "28.990,00 €",
+      baseImage: "rocket3GTStormMattSapphireBlackImage",
       colors: [
-        { name: "Matt Silver Ice", price: "30.290,00 €", image: "rocket3StormGtSilverImage" },
-        { name: "Jet Black", price: "30.290,00 €", image: "rocket3StormGtBlackImage" }
+        { name: "Matt Sapphire Black / Satin Pacific Blue", price: "28.990,00 €", image: "rocket3GTStormMattSapphireBlackImage" },
+        { name: "Sapphire Black / Carnival Red", price: "29.290,00 €", image: "rocket3GTStormSapphireBlackImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["2500cc Rocket triple engine", "Grand touring comfort", "180 NM Max Torque", "Premium touring features"]
@@ -133,7 +136,6 @@ const Rocket3Page = () => {
                   </ul>
                 )}
                 
-                {/* Color Selection */}
                 <div className="mb-4">
                   <p className="text-sm font-medium mb-2">Available Colors:</p>
                   <div className="flex flex-wrap gap-2">

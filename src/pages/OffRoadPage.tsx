@@ -4,11 +4,7 @@ import Navbar from "@/components/Navbar";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-
-// Placeholder images - to be replaced with actual images
-import offRoadImage from "@/assets/hero-motorcycle.jpg";
 
 const OffRoadPage = () => {
   const { language: currentLanguage } = useLanguage();
@@ -22,9 +18,7 @@ const OffRoadPage = () => {
       backButton: "Back to Models",
       configureButton: "Configure",
       detailsButton: "View Details",
-      priceFrom: "From",
-      newBadge: "NEW",
-      priceTba: "PRICE TO BE ANNOUNCED"
+      priceFrom: "From"
     },
     gr: {
       title: "Off Road",
@@ -32,9 +26,7 @@ const OffRoadPage = () => {
       backButton: "Επιστροφή στα Μοντέλα",
       configureButton: "Διαμόρφωση",
       detailsButton: "Προβολή Λεπτομερειών",
-      priceFrom: "Από",
-      newBadge: "ΝΕΟ",
-      priceTba: "ΤΙΜΗ ΑΝΑΜΕΝΕΤΑΙ"
+      priceFrom: "Από"
     }
   };
 
@@ -43,10 +35,9 @@ const OffRoadPage = () => {
       id: "tf-250-e",
       name: "TF 250-E",
       price: "11.490,00 €",
-      baseImage: "tf250eImage",
+      baseImage: "tf250eTriumphRacingYellowImage",
       colors: [
-        { name: "Jet Black", price: "11.490,00 €", image: "tf250eBlackImage" },
-        { name: "Racing Yellow", price: "11.490,00 €", image: "tf250eYellowImage" }
+        { name: "Triumph Racing Yellow / Black / White", price: "11.490,00 €", image: "tf250eTriumphRacingYellowImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["250cc 4-stroke engine", "Lightweight Aluminium Frame", "Brembo Brakes", "Electric start"]
@@ -55,41 +46,14 @@ const OffRoadPage = () => {
     {
       id: "tf-450-e",
       name: "TF 450-E",
-      price: "13.490,00 €",
-      baseImage: "tf450eImage", 
+      price: "12.390,00 €",
+      baseImage: "tf450eTriumphRacingYellowImage", 
       colors: [
-        { name: "Jet Black", price: "13.490,00 €", image: "tf450eBlackImage" },
-        { name: "Racing Yellow", price: "13.490,00 €", image: "tf450eYellowImage" }
+        { name: "Triumph Racing Yellow / Black / White", price: "12.390,00 €", image: "tf450eTriumphRacingYellowImage" }
       ],
       specs: currentLanguage === 'en' 
         ? ["450cc 4-stroke engine", "Lightweight Aluminium Frame", "Brembo Brakes", "Electric start"]
         : ["450κ.εκ. 4-χρονος κινητήρας", "Ελαφρό πλαίσιο αλουμινίου", "Φρένα Brembo", "Ηλεκτρική εκκίνηση"]
-    },
-    {
-      id: "tf-250-x",
-      name: "TF 250-X",
-      price: "10.990,00 €",
-      baseImage: "tf250xImage",
-      colors: [
-        { name: "Jet Black", price: "10.990,00 €", image: "tf250xBlackImage" },
-        { name: "Racing Yellow", price: "10.990,00 €", image: "tf250xYellowImage" }
-      ],
-      specs: currentLanguage === 'en' 
-        ? ["250cc 4-stroke engine", "Motocross focused", "Competition ready", "Kick start only"]
-        : ["250κ.εκ. 4-χρονος κινητήρας", "Εστιασμένο στο motocross", "Έτοιμο για αγώνες", "Μόνο kick start"]
-    },
-    {
-      id: "tf-450-x",
-      name: "TF 450-X",
-      price: "12.990,00 €",
-      baseImage: "tf450xImage",
-      colors: [
-        { name: "Jet Black", price: "12.990,00 €", image: "tf450xBlackImage" },
-        { name: "Racing Yellow", price: "12.990,00 €", image: "tf450xYellowImage" }
-      ],
-      specs: currentLanguage === 'en' 
-        ? ["450cc 4-stroke engine", "Motocross focused", "Competition ready", "Kick start only"]
-        : ["450κ.εκ. 4-χρονος κινητήρας", "Εστιασμένο στο motocross", "Έτοιμο για αγώνες", "Μόνο kick start"]
     }
   ];
 
@@ -106,7 +70,7 @@ const OffRoadPage = () => {
       const colorOption = model.colors.find((c: any) => c.name === selectedColor);
       if (colorOption) return colorOption.image;
     }
-    return model.baseImage || offRoadImage;
+    return model.baseImage;
   };
 
   const getModelPrice = (model: any) => {
@@ -166,7 +130,6 @@ const OffRoadPage = () => {
                   </ul>
                 )}
                 
-                {/* Color Selection */}
                 <div className="mb-4">
                   <p className="text-sm font-medium mb-2">Available Colors:</p>
                   <div className="flex flex-wrap gap-2">
