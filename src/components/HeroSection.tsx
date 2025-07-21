@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, MapPin } from "lucide-react";
-import heroImage from "@/assets/hero-motorcycle.jpg";
+import heroImage from "@/assets/bobber-tfc-my25-08-var-step-car-1410x793.webp";
 
 interface HeroSectionProps {
   language: 'en' | 'gr';
@@ -15,14 +15,14 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       cta1: "View Models",
       cta2: "Test Ride",
       location: "Patras, Greece",
-      experience: "40+ Years Experience"
+      experience: "30+ Years of Experience"
     },
     gr: {
       title: "Επίσημος Αντιπρόσωπος Triumph",
       subtitle: "Δυτική Ελλάδα",
       description: "Ανακαλύψτε τις θρυλικές βρετανικές μοτοσικλέτες που ορίζουν την ελευθερία, την περιπέτεια και την τεχνική αρτιότητα. Ζήστε την εμπειρία Triumph στην Πάτρα.",
       cta1: "Δείτε Μοντέλα",
-      cta2: "Δοκιμαστική Βόλτα",
+      cta2: "Test Ride",
       location: "Πάτρα, Ελλάδα",
       experience: "40+ Χρόνια Εμπειρίας"
     }
