@@ -25,6 +25,16 @@ import speedTwin900SilverImage from "@/assets/speed-twin-900-my25-aluminium-silv
 import speedTwin900WhiteImage from "@/assets/speed-twin-900-my25-purewhite-rhs.webp";
 import speedTwin900BlackImage from "@/assets/speed-twin-900-my25-phantom-black-rhs.webp";
 
+import scrambler900JetBlackImage from "@/assets/scrambler-900-my23_jet-black_rhs_1080px.webp";
+import scrambler900MattKhakiImage from "@/assets/scrambler-900_my23_matt-khaki_rhs_1080px.webp";
+import scrambler900KingfisherBlueImage from "@/assets/scrambler-900_my25_kingfisher-blue_rhs_1080px.webp";
+import scrambler900IconImage from "@/assets/scrambler-900_my25_icon-edition_rhs_1080px.webp";
+
+import bonnevilleT100JetBlackImage from "@/assets/bonneville-t100_my24_jet_black_rhs_1080px.webp";
+import bonnevilleT100AluminiumImage from "@/assets/bonneville-t100_my25_baja-orange_rhs_1080px.webp";
+import bonnevilleT100CompetitionGreenImage from "@/assets/bonneville-t100_my24_competition-green-ironstone_rhs_1080px.webp";
+import bonnevilleT100IconImage from "@/assets/bonneville-t100_my25_icon-edition_rhs_1080px.webp";
+
 const ClassicsPage = () => {
   const { language: currentLanguage } = useLanguage();
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
@@ -114,12 +124,12 @@ const ClassicsPage = () => {
         id: "scrambler-900",
         name: "Scrambler 900",
         price: "11.590,00 €",
-        baseImage: "scrambler900MattKhakiImage",
+        baseImage: scrambler900MattKhakiImage,
         colors: [
-          { name: "Jet Black", price: "11.590,00 €", image: "scrambler900JetBlackImage" },
-          { name: "Matte Khaki", price: "11.940,00 €", image: "scrambler900MattKhakiImage" },
-          { name: "Kingfisher Blue", price: "11.940,00 €", image: "scrambler900KingfisherBlueImage" },
-          { name: "Icon Edition", price: "12.190,00 €", image: "scrambler900IconImage" }
+          { name: "Jet Black", price: "11.590,00 €", image: scrambler900JetBlackImage },
+          { name: "Matte Khaki", price: "11.940,00 €", image: scrambler900MattKhakiImage },
+          { name: "Kingfisher Blue", price: "11.940,00 €", image: scrambler900KingfisherBlueImage },
+          { name: "Icon Edition", price: "12.190,00 €", image: scrambler900IconImage }
           
         ],
         specs: currentLanguage === 'en' 
@@ -130,12 +140,12 @@ const ClassicsPage = () => {
         id: "bonneville-t100",
         name: "Bonneville T100",
         price: "11.490,00 €",
-        baseImage: "bonnevilleT100AluminiumImage",
+        baseImage: bonnevilleT100AluminiumImage,
         colors: [
-          { name: "Jet Black", price: "11.490,00 €", image: "bonnevilleT100JetBlackImage" },
-          { name: "Aluminium", price: "11.490,00 €", image: "bonnevilleT100AluminiumImage" },
-          { name: "Competition Green", price: "11.840,00 €", image: "bonnevilleT100CompetitionGreenImage" },
-          { name: "Icon Edition", price: "12.090,00 €", image: "bonnevilleT100IconImage" }
+          { name: "Jet Black", price: "11.490,00 €", image: bonnevilleT100JetBlackImage },
+          { name: "Aluminium", price: "11.840,00 €", image: bonnevilleT100AluminiumImage },
+          { name: "Competition Green", price: "11.840,00 €", image: bonnevilleT100CompetitionGreenImage },
+          { name: "Icon Edition", price: "12.090,00 €", image: bonnevilleT100IconImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["900cc Bonneville twin", "Classic British styling", "Modern reliability"]
