@@ -24,7 +24,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       cta1: "Δείτε Μοντέλα",
       cta2: "Test Ride",
       location: "Πάτρα, Ελλάδα",
-      experience: "40+ Χρόνια Εμπειρίας"
+      experience: "30+ Χρόνια Εμπειρίας"
     }
   };
 
