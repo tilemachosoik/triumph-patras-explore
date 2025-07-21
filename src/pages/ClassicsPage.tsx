@@ -323,7 +323,7 @@ const ClassicsPage = () => {
                       <img 
                         src={getModelImage(model) as string} 
                         alt={model.name}
-                        className="w-full h-64 -mt-2 object-contain"
+                        className="w-full h-56 -mt-2 object-cover"
                       />
                       <div className="absolute top-2 right-2">
                         {model.isNew && (
