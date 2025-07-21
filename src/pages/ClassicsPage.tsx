@@ -9,6 +9,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
 // Import actual images
+import speed400CarnivalRedImage from "@/assets/speed 400_my24_carnival red_rhs.webp";
+import speed400CaspianBlueImage from "@/assets/speed 400_my24_caspian blue_rhs.webp";
+import speed400PhantomBlackImage from "@/assets/speed 400_my24_phantom black_rhs.webp";
+
+import scrambler400xCarnivalRedImage from "@/assets/scrambler 400 x_my24_carnival red_rhs.webp";
+import scrambler400xMatteKhakiRedImage from "@/assets/scrambler 400 x_my24_matt khaki green_rhs.webp";
+import scrambler400xJetBlackImage from "@/assets/scrambler 400 x_my24_phantom black_rhs.webp";
+
+import scrambler400xcVanillaWhiteImage from "@/assets/scrambler-400-xc-my25-vanilla-white-rhs-1080.webp";
+import scrambler400xcRacingYellowImage from "@/assets/scrambler-400xc-my25-racing-yellow-rhs-1080.webp";
+import scrambler400xcStormGreyImage from "@/assets/scrambler-400xc-my25-storm-grey-rhs-1080.webp";
+
 import speedTwin900SilverImage from "@/assets/speed-twin-900-my25-aluminium-silver-rhs.webp";
 import speedTwin900WhiteImage from "@/assets/speed-twin-900-my25-purewhite-rhs.webp";
 import speedTwin900BlackImage from "@/assets/speed-twin-900-my25-phantom-black-rhs.webp";
@@ -45,14 +57,13 @@ const ClassicsPage = () => {
         price: "5.690,00 €",
         baseImage: "speed400AluminiumSilverImage",
         colors: [
-          { name: "Phantom Black / Storm Grey", price: "5.690,00 €", image: "speed400PhantomBlackImage" },
-          { name: "Caspian Blue / Storm Grey", price: "5.690,00 €", image: "speed400CaspianBlueImage" },
-          { name: "Carnival Red / Storm Grey", price: "5.690,00 €", image: "speed400CarnivalRedImage" },
-          { name: "Aluminium Silver", price: "5.690,00 €", image: "speed400AluminiumSilverImage" }
+          { name: "Phantom Black", price: "5.690,00 €", image: speed400PhantomBlackImage },
+          { name: "Caspian Blue", price: "5.690,00 €", image: speed400CaspianBlueImage },
+          { name: "Carnival Red", price: "5.690,00 €", image: speed400CarnivalRedImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["398cc single-cylinder engine", "40 PS power", "Lightweight chassis"]
-          : ["398κ.εκ. μονοκύλινδρος κινητήρας", "40 PS ιπποδύναμη", "Ελαφρό πλαίσιο"]
+          : ["398κ.εκ. μονοκύλινδρος κινητήρας", "40 PS ιπποδύναμη", "Ελαφρύ πλαίσιο"]
       },
       {
         id: "scrambler-400x",
@@ -60,9 +71,9 @@ const ClassicsPage = () => {
         price: "6.390,00 €",
         baseImage: "scrambler400xMattKhakiImage",
         colors: [
-          { name: "Matt Khaki Green / Pure White", price: "6.390,00 €", image: "scrambler400xMattKhakiImage" },
-          { name: "Carnival Red / Phantom Black", price: "6.390,00 €", image: "scrambler400xCarnivalRedImage" },
-          { name: "Jet Black", price: "6.390,00 €", image: "scrambler400xJetBlackImage" }
+          { name: "Matt Khaki Green / Pure White", price: "6.390,00 €", image: scrambler400xMattKhakiImage },
+          { name: "Carnival Red / Phantom Black", price: "6.390,00 €", image: scrambler400xCarnivalRedImage },
+          { name: "Jet Black", price: "6.390,00 €", image: scrambler400xJetBlackImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["398cc single-cylinder engine", "40 PS power", "Scrambler styling"]
@@ -74,8 +85,9 @@ const ClassicsPage = () => {
         price: "7.150,00 €",
         baseImage: "scrambler400xcRacingYellowImage",
         colors: [
-          { name: "Racing Yellow", price: "7.150,00 €", image: "scrambler400xcRacingYellowImage" },
-          { name: "Storm Grey", price: "7.150,00 €", image: "scrambler400xcStormGreyImage" }
+          { name: "Vanilla White", price: "7.150,00 €", image: scrambler400xcVanillaWhiteImage },
+          { name: "Racing Yellow", price: "7.275,00 €", image: scrambler400xcRacingYellowImage },
+          { name: "Storm Grey", price: "7.275,00 €", image: scrambler400xcStormGreyImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["398cc single-cylinder engine", "40 PS power", "Cross-country capability"]
@@ -104,12 +116,11 @@ const ClassicsPage = () => {
         price: "11.590,00 €",
         baseImage: "scrambler900MattKhakiImage",
         colors: [
-          { name: "Matt Khaki", price: "11.590,00 €", image: "scrambler900MattKhakiImage" },
+          { name: "Jet Black", price: "11.590,00 €", image: "scrambler900JetBlackImage" },
+          { name: "Matte Khaki", price: "11.940,00 €", image: "scrambler900MattKhakiImage" },
           { name: "Kingfisher Blue", price: "11.940,00 €", image: "scrambler900KingfisherBlueImage" },
-          { name: "Icon Edition", price: "12.190,00 €", image: "scrambler900IconImage" },
-          { name: "Sapphire Black", price: "11.590,00 €", image: "scrambler900SapphireBlackImage" },
-          { name: "Ash Grey", price: "11.940,00 €", image: "scrambler900AshGreyImage" },
-          { name: "Carnival Red", price: "11.940,00 €", image: "scrambler900CarnivalRedImage" }
+          { name: "Icon Edition", price: "12.190,00 €", image: "scrambler900IconImage" }
+          
         ],
         specs: currentLanguage === 'en' 
           ? ["900cc Parallel Twin", "65 PS power", "80 NM torque"]
@@ -121,8 +132,9 @@ const ClassicsPage = () => {
         price: "11.490,00 €",
         baseImage: "bonnevilleT100AluminiumImage",
         colors: [
-          { name: "Aluminium / Baja Orange", price: "11.490,00 €", image: "bonnevilleT100AluminiumImage" },
-          { name: "Competition Green / Ironstone", price: "11.840,00 €", image: "bonnevilleT100CompetitionGreenImage" },
+          { name: "Jet Black", price: "11.490,00 €", image: "bonnevilleT100JetBlackImage" },
+          { name: "Aluminium", price: "11.490,00 €", image: "bonnevilleT100AluminiumImage" },
+          { name: "Competition Green", price: "11.840,00 €", image: "bonnevilleT100CompetitionGreenImage" },
           { name: "Icon Edition", price: "12.090,00 €", image: "bonnevilleT100IconImage" }
         ],
         specs: currentLanguage === 'en' 
@@ -137,9 +149,9 @@ const ClassicsPage = () => {
         price: "14.990,00 €",
         baseImage: "speedTwin1200AluminiumSilverImage",
         colors: [
-          { name: "Crystal White / Sapphire Black", price: "14.990,00 €", image: "speedTwin1200CrystalWhiteImage" },
-          { name: "Carnival Red / Sapphire Black", price: "15.340,00 €", image: "speedTwin1200CarnivalRedImage" },
-          { name: "Sapphire Black", price: "15.340,00 €", image: "speedTwin1200SapphireBlackImage" }
+          { name: "Aluminium Silver", price: "14.990,00 €", image: "speedTwin1200AluminiumSilverImage" },
+          { name: "Crystal White", price: "15.340,00 €", image: "speedTwin1200CrystalWhiteImage" },
+          { name: "Carnival Red", price: "15.340,00 €", image: "speedTwin1200CarnivalRedImage" }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "96 PS power", "112 NM torque"]
@@ -151,8 +163,8 @@ const ClassicsPage = () => {
         price: "17.290,00 €",
         baseImage: "speedTwin1200RsBajaOrangeImage",
         colors: [
-          { name: "Baja Orange / Sapphire Black", price: "17.290,00 €", image: "speedTwin1200RsBajaOrangeImage" },
-          { name: "Phantom Black / Silver Ice", price: "17.290,00 €", image: "speedTwin1200RsPhantomBlackImage" }
+          { name: "Baja Orange", price: "17.290,00 €", image: "speedTwin1200RsBajaOrangeImage" },
+          { name: "Sapphire Black", price: "17.290,00 €", image: "speedTwin1200RsSapphireBlackImage" }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "96 PS power", "Premium suspension"]
@@ -165,8 +177,9 @@ const ClassicsPage = () => {
         baseImage: "scrambler1200xSapphireBlackImage",
         colors: [
           { name: "Sapphire Black", price: "14.990,00 €", image: "scrambler1200xSapphireBlackImage" },
-          { name: "Matt Grey", price: "15.190,00 €", image: "scrambler1200xMattGreyImage" },
-          { name: "Icon Edition", price: "15.750,00 €", image: "scrambler1200xIconImage" }
+          { name: "Ash Grey", price: "15.190,00 €", image: "scrambler1200xAshGreyImage" },
+          { name: "Carnival Red", price: "15.190,00 €", image: "scrambler1200xCarnivalRedImage" },
+          { name: "Icon Edition", price: "15.790,00 €", image: "scrambler1200xIconImage" }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc high power twin", "90 PS power", "Off-road capability"]
@@ -178,9 +191,10 @@ const ClassicsPage = () => {
         price: "16.990,00 €",
         baseImage: "scrambler1200xePhantomBlackImage",
         colors: [
-          { name: "Phantom Black / Storm Grey", price: "16.990,00 €", image: "scrambler1200xePhantomBlackImage" },
-          { name: "Baja Orange / Phantom Black", price: "17.340,00 €", image: "scrambler1200xeBajaOrangeImage" },
-          { name: "Icon Edition", price: "17.250,00 €", image: "scrambler1200xeIconImage" }
+          { name: "Sapphire Black", price: "16.990,00 €", image: "scrambler1200xeSapphireBlackImage" },
+          { name: "Phantom Black", price: "17.340,00 €", image: "scrambler1200xePhantomBlackImage" },
+          { name: "Baja Orange", price: "17.340,00 €", image: "scrambler1200xeBajaOrangeImage" },
+          { name: "Icon Edition", price: "17.790,00 €", image: "scrambler1200xeIconImage" }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc high power twin", "90 PS power", "Extended adventure capability"]
@@ -192,9 +206,10 @@ const ClassicsPage = () => {
         price: "14.490,00 €",
         baseImage: "bonnevilleT120CrystalWhiteImage",
         colors: [
-          { name: "Crystal White / Cranberry Red", price: "14.490,00 €", image: "bonnevilleT120CrystalWhiteImage" },
-          { name: "Jet Black / Fusion White", price: "14.840,00 €", image: "bonnevilleT120JetBlackImage" },
-          { name: "Icon Edition", price: "15.250,00 €", image: "bonnevilleT120IconImage" }
+          { name: "Jet Black", price: "14.490,00 €", image: "bonnevilleT120JetBlackImage" },
+          { name: "Crystal White", price: "14.840,00 €", image: "bonnevilleT120CrystalWhiteImage" },
+          { name: "Jet Black / Fusion White", price: "14.840,00 €", image: "bonnevilleT120BlackWhiteImage" },
+          { name: "Icon Edition", price: "15.290,00 €", image: "bonnevilleT120IconImage" }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "80 PS power", "Classic styling"]
@@ -207,7 +222,7 @@ const ClassicsPage = () => {
         baseImage: "bonnevilleT120BlackJetBlackImage",
         colors: [
           { name: "Jet Black", price: "14.490,00 €", image: "bonnevilleT120BlackJetBlackImage" },
-          { name: "Graphite / Matt Graphite", price: "14.840,00 €", image: "bonnevilleT120BlackGraphiteImage" }
+          { name: "Graphite", price: "14.840,00 €", image: "bonnevilleT120BlackGraphiteImage" }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "80 PS power", "Blacked-out styling"]
@@ -219,8 +234,9 @@ const ClassicsPage = () => {
         price: "16.990,00 €",
         baseImage: "bonnevilleBobberMattGraphiteImage",
         colors: [
-          { name: "Matt Graphite / Matt Baja Orange", price: "16.990,00 €", image: "bonnevilleBobberMattGraphiteImage" },
-          { name: "Jet Black / Ash Grey", price: "17.340,00 €", image: "bonnevilleBobberJetBlackImage" },
+          { name: "Jet Black", price: "16.990,00 €", image: "bonnevilleBobberJetBlackImage" },
+          { name: "Matt Graphite / Matt Baja Orange", price: "17.340,00 €", image: "bonnevilleBobberMattGraphiteImage" },
+          { name: "Jet Black / Ash Grey", price: "17.340,00 €", image: "bonnevilleBobberBlackGreyImage" },
           { name: "Icon Edition", price: "17.790,00 €", image: "bonnevilleBobberIconImage" }
         ],
         specs: currentLanguage === 'en' 
@@ -233,8 +249,9 @@ const ClassicsPage = () => {
         price: "16.990,00 €",
         baseImage: "bonnevilleSpeedmasterSnowdoniaWhiteImage",
         colors: [
-          { name: "Snowdonia White / Cranberry Red", price: "16.990,00 €", image: "bonnevilleSpeedmasterSnowdoniaWhiteImage" },
-          { name: "Pacific Blue / Silver Ice", price: "17.340,00 €", image: "bonnevilleSpeedmasterPacificBlueImage" },
+          { name: "Jet Black", price: "16.990,00 €", image: "bonnevilleSpeedmasterJetBlackImage" },
+          { name: "Snowdonia White", price: "17.340,00 €", image: "bonnevilleSpeedmasterSnowdoniaWhiteImage" },
+          { name: "Pacific Blue", price: "17.340,00 €", image: "bonnevilleSpeedmasterPacificBlueImage" },
           { name: "Icon Edition", price: "17.790,00 €", image: "bonnevilleSpeedmasterIconImage" }
         ],
         specs: currentLanguage === 'en' 
