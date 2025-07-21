@@ -74,7 +74,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
       title: "Επικοινωνήστε μαζί μας",
       subtitle: "Επισκεφθείτε την Έκθεση μας ή Κλείστε Test Ride",
       location: {
-        title: "Επισκεφθείτε το Showroom μας",
+        title: "Επισκεφθείτε την Έκθεση μας",
         address: "Νοταρά 10",
         city: "Πάτρα 264 41, Ελλάδα",
         phone: "+30 261 600 8888",
