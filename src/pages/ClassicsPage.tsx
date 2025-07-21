@@ -71,8 +71,8 @@ const ClassicsPage = () => {
         price: "6.390,00 €",
         baseImage: scrambler400xMattKhakiImage,
         colors: [
-          { name: "Matt Khaki Green / Pure White", price: "6.390,00 €", image: scrambler400xMattKhakiImage },
-          { name: "Carnival Red / Phantom Black", price: "6.390,00 €", image: scrambler400xCarnivalRedImage },
+          { name: "Matt Khaki Green", price: "6.390,00 €", image: scrambler400xMattKhakiImage },
+          { name: "Carnival Red", price: "6.390,00 €", image: scrambler400xCarnivalRedImage },
           { name: "Jet Black", price: "6.390,00 €", image: scrambler400xJetBlackImage }
         ],
         specs: currentLanguage === 'en' 
