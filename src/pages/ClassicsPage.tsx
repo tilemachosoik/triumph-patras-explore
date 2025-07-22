@@ -39,22 +39,22 @@ import scrambler1200xSapphireBlackImage from "@/assets/scrambler_1200_x_my24_sap
 import scrambler1200xMatteKhakiImage from "@/assets/scrambler_1200_x_my26-matt-khaki-green-rhs-1080.webp";
 import scrambler1200xAshGreyImage from "@/assets/scrambler_1200_x_my24_ash_grey_rhs.webp";
 import scrambler1200xCarnivalRedImage from "@/assets/scrambler_1200_x_my24_carnival_red_rhs.webp";
-import scrambler1200xIconImage from "scrambler_1200_x_my25_icon_edition_rhs_1080px.webp";
+import scrambler1200xIconImage from "@/assets/scrambler_1200_x_my25_icon_edition_rhs_1080px.webp";
 
 import scrambler1200xeSapphireBlackImage from "@/assets/scrambler_1200_xe_my24_sapphire_black_rhs.webp";
-import scrambler1200xeBlackGreyImagee from "@/assets/scrambler_1200_xe_my24_phantom_black_rhs.webp";
+import scrambler1200xeBlackGreyImage from "@/assets/scrambler_1200_xe_my24_phantom_black_rhs.webp";
 import scrambler1200xeBajaOrangeImage from "@/assets/scrambler_1200_xe_my24_baja_orange_rhs.webp";
-import scrambler1200xeIconImage from "scrambler_1200_xe_my25_icon_edition_rhs_1080px.webp";
+import scrambler1200xeIconImage from "@/assets/scrambler_1200_xe_my25_icon_edition_rhs_1080px.webp";
 
 import bonnevilleBobberJetBlackImage from "@/assets/bobber-black.webp";
 import bonnevilleBobberMatteGraphiteImage from "@/assets/bobber-orange.webp";
 import bonnevilleBobberBlackGreyImage from "@/assets/bobber-black-gray.webp";
-import bonnevilleBobberIconImage from "bonneville_bobber_my25_icon_edition_rhs_1080px.webp";
+import bonnevilleBobberIconImage from "@/assets/bonneville_bobber_my25_icon_edition_rhs_1080px.webp";
 
 import bonnevilleSpeedmasterJetBlackImage from "@/assets/speedmaster-black.webp";
 import bonnevilleSpeedmasterSnowdoniaWhiteImage from "@/assets/speedmaster-white-red.webp";
 import bonnevilleSpeedmasterPacificBlueImage from "@/assets/speedmaster-blue.webp";
-import bonnevilleSpeedmasterIconImage from "bonneville_speedmaster_my25_icon_edition_rhs_1080px.webp";
+import bonnevilleSpeedmasterIconImage from "@/assets/bonneville_speedmaster_my25_icon_edition_rhs_1080px.webp";
 
 
 const ClassicsPage = () => {
