@@ -35,6 +35,28 @@ import bonnevilleT100AluminiumImage from "@/assets/bonneville-t100_my25_baja-ora
 import bonnevilleT100CompetitionGreenImage from "@/assets/bonneville-t100_my24_competition-green-ironstone_rhs_1080px.webp";
 import bonnevilleT100IconImage from "@/assets/bonneville-t100_my25_icon-edition_rhs_1080px.webp";
 
+import scrambler1200xSapphireBlackImage from "@/assets/scrambler_1200_x_my24_sapphire_black_rhs.webp";
+import scrambler1200xMatteKhakiImage from "@/assets/scrambler_1200_x_my26-matt-khaki-green-rhs-1080.webp";
+import scrambler1200xAshGreyImage from "@/assets/scrambler_1200_x_my24_ash_grey_rhs.webp";
+import scrambler1200xCarnivalRedImage from "@/assets/scrambler_1200_x_my24_carnival_red_rhs.webp";
+import scrambler1200xIconImage from "scrambler_1200_x_my25_icon_edition_rhs_1080px.webp";
+
+import scrambler1200xeSapphireBlackImage from "@/assets/scrambler_1200_xe_my24_sapphire_black_rhs.webp";
+import scrambler1200xeBlackGreyImagee from "@/assets/scrambler_1200_xe_my24_phantom_black_rhs.webp";
+import scrambler1200xeBajaOrangeImage from "@/assets/scrambler_1200_xe_my24_baja_orange_rhs.webp";
+import scrambler1200xeIconImage from "scrambler_1200_xe_my25_icon_edition_rhs_1080px.webp";
+
+import bonnevilleBobberJetBlackImage from "@/assets/bobber-black.webp";
+import bonnevilleBobberMatteGraphiteImage from "@/assets/bobber-orange.webp";
+import bonnevilleBobberBlackGreyImage from "@/assets/bobber-black-gray.webp";
+import bonnevilleBobberIconImage from "bonneville_bobber_my25_icon_edition_rhs_1080px.webp";
+
+import bonnevilleSpeedmasterJetBlackImage from "@/assets/speedmaster-black.webp";
+import bonnevilleSpeedmasterSnowdoniaWhiteImage from "@/assets/speedmaster-white-red.webp";
+import bonnevilleSpeedmasterPacificBlueImage from "@/assets/speedmaster-blue.webp";
+import bonnevilleSpeedmasterIconImage from "bonneville_speedmaster_my25_icon_edition_rhs_1080px.webp";
+
+
 const ClassicsPage = () => {
   const { language: currentLanguage } = useLanguage();
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
@@ -184,12 +206,13 @@ const ClassicsPage = () => {
         id: "scrambler-1200-x",
         name: "Scrambler 1200 X",
         price: "14.990,00 €",
-        baseImage: "scrambler1200xSapphireBlackImage",
+        baseImage: scrambler1200xSapphireBlackImage,
         colors: [
-          { name: "Sapphire Black", price: "14.990,00 €", image: "scrambler1200xSapphireBlackImage" },
-          { name: "Ash Grey", price: "15.190,00 €", image: "scrambler1200xAshGreyImage" },
-          { name: "Carnival Red", price: "15.190,00 €", image: "scrambler1200xCarnivalRedImage" },
-          { name: "Icon Edition", price: "15.790,00 €", image: "scrambler1200xIconImage" }
+          { name: "Sapphire Black", price: "14.990,00 €", image: scrambler1200xSapphireBlackImage },
+          { name: "Matte Khaki", price: "14.990,00 €", image: scrambler1200xMatteKhakiImage },
+          { name: "Ash Grey", price: "15.190,00 €", image: scrambler1200xAshGreyImage },
+          { name: "Carnival Red", price: "15.190,00 €", image: scrambler1200xCarnivalRedImage },
+          { name: "Icon Edition", price: "15.790,00 €", image: scrambler1200xIconImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc high power twin", "90 PS power", "Off-road capability"]
@@ -199,12 +222,12 @@ const ClassicsPage = () => {
         id: "scrambler-1200-xe",
         name: "Scrambler 1200 XE",
         price: "16.990,00 €",
-        baseImage: "scrambler1200xePhantomBlackImage",
+        baseImage: scrambler1200xePhantomBlackImage,
         colors: [
-          { name: "Sapphire Black", price: "16.990,00 €", image: "scrambler1200xeSapphireBlackImage" },
-          { name: "Phantom Black", price: "17.340,00 €", image: "scrambler1200xePhantomBlackImage" },
-          { name: "Baja Orange", price: "17.340,00 €", image: "scrambler1200xeBajaOrangeImage" },
-          { name: "Icon Edition", price: "17.790,00 €", image: "scrambler1200xeIconImage" }
+          { name: "Sapphire Black", price: "16.990,00 €", image: scrambler1200xeSapphireBlackImage },
+          { name: "Phantom Black / Storm Grey", price: "17.340,00 €", image: scrambler1200xeBlackGreyImage },
+          { name: "Baja Orange", price: "17.340,00 €", image: scrambler1200xeBajaOrangeImage },
+          { name: "Icon Edition", price: "17.790,00 €", image: scrambler1200xeIconImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc high power twin", "90 PS power", "Extended adventure capability"]
@@ -242,12 +265,12 @@ const ClassicsPage = () => {
         id: "bonneville-bobber",
         name: "Bonneville Bobber",
         price: "16.990,00 €",
-        baseImage: "bonnevilleBobberMattGraphiteImage",
+        baseImage: bonnevilleBobberMattGraphiteImage,
         colors: [
-          { name: "Jet Black", price: "16.990,00 €", image: "bonnevilleBobberJetBlackImage" },
-          { name: "Matt Graphite / Matt Baja Orange", price: "17.340,00 €", image: "bonnevilleBobberMattGraphiteImage" },
-          { name: "Jet Black / Ash Grey", price: "17.340,00 €", image: "bonnevilleBobberBlackGreyImage" },
-          { name: "Icon Edition", price: "17.790,00 €", image: "bonnevilleBobberIconImage" }
+          { name: "Jet Black", price: "16.990,00 €", image: bonnevilleBobberJetBlackImage },
+          { name: "Matte Graphite / Matte Baja Orange", price: "17.340,00 €", image: bonnevilleBobberMatteGraphiteImage },
+          { name: "Jet Black / Ash Grey", price: "17.340,00 €", image: bonnevilleBobberBlackGreyImage },
+          { name: "Icon Edition", price: "17.790,00 €", image: bonnevilleBobberIconImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "77 PS power", "Bobber styling"]
@@ -257,12 +280,12 @@ const ClassicsPage = () => {
         id: "bonneville-speedmaster",
         name: "Bonneville Speedmaster",
         price: "16.990,00 €",
-        baseImage: "bonnevilleSpeedmasterSnowdoniaWhiteImage",
+        baseImage: bonnevilleSpeedmasterSnowdoniaWhiteImage,
         colors: [
-          { name: "Jet Black", price: "16.990,00 €", image: "bonnevilleSpeedmasterJetBlackImage" },
-          { name: "Snowdonia White", price: "17.340,00 €", image: "bonnevilleSpeedmasterSnowdoniaWhiteImage" },
-          { name: "Pacific Blue", price: "17.340,00 €", image: "bonnevilleSpeedmasterPacificBlueImage" },
-          { name: "Icon Edition", price: "17.790,00 €", image: "bonnevilleSpeedmasterIconImage" }
+          { name: "Jet Black", price: "16.990,00 €", image: bonnevilleSpeedmasterJetBlackImage },
+          { name: "Snowdonia White / Cranberry Red", price: "17.340,00 €", image: bonnevilleSpeedmasterSnowdoniaWhiteImage },
+          { name: "Pacific Blue / Silver Ice", price: "17.340,00 €", image: bonnevilleSpeedmasterPacificBlueImage },
+          { name: "Icon Edition", price: "17.790,00 €", image: bonnevilleSpeedmasterIconImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "77 PS power", "Cruiser comfort"]
