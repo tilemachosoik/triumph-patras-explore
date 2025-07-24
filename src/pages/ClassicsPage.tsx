@@ -44,7 +44,7 @@ import bonnevilleT100IconImage from "@/assets/bonneville-t100_my25_icon-edition_
 
 import bonnevilleT120JetBlackImage from "@/assets/t120-black.webp";
 import bonnevilleT120CrystalWhiteImage from "@/assets/t120-red.webp";
-import bonnevilleT120BBlackWhiteImage from "@/assets/bonneville-t120_my24_jet-black-fusion-white_rhs_1080px.webp";
+import bonnevilleT120BlackWhiteImage from "@/assets/bonneville-t120_my24_jet-black-fusion-white_rhs_1080px.webp";
 import bonnevilleT120IconImage from "@/assets/bonneville t120_my25_icon_edition_rhs_1080px.webp";
 
 import bonnevilleT120BlackJetBlackImage from "@/assets/t120black-black.webp";
