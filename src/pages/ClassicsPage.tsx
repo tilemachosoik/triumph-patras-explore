@@ -265,7 +265,7 @@ const ClassicsPage = () => {
         id: "bonneville-bobber",
         name: "Bonneville Bobber",
         price: "16.990,00 €",
-        baseImage: bonnevilleBobberMattGraphiteImage,
+        baseImage: bonnevilleBobberMatteGraphiteImage,
         colors: [
           { name: "Jet Black", price: "16.990,00 €", image: bonnevilleBobberJetBlackImage },
           { name: "Matte Graphite / Matte Baja Orange", price: "17.340,00 €", image: bonnevilleBobberMatteGraphiteImage },
