@@ -30,10 +30,25 @@ import scrambler900MattKhakiImage from "@/assets/scrambler-900_my23_matt-khaki_r
 import scrambler900KingfisherBlueImage from "@/assets/scrambler-900_my25_kingfisher-blue_rhs_1080px.webp";
 import scrambler900IconImage from "@/assets/scrambler-900_my25_icon-edition_rhs_1080px.webp";
 
+import speedTwin1200AluminiumSilverImage from "@/assets/speed-twin-1200-my25-aluminum-silver-rhs-1080.webp";
+import speedTwin1200CrystalWhiteImage from "@/assets/speed-twin-1200-my25-crystal-white-rhs_1080.webp";
+import speedTwin1200CarnivalRedImage from "@/assets/speed-twin-1200-my25-carnival-red-rhs-1080.webp";
+
+import speedTwin1200RsBajaOrangeImage from "@/assets/speed-twin-1200-rs-my25-baja-orange-rhs-1080.webp";
+import speedTwin1200RsSapphireBlackImage from "@/assets/speed-twin-1200-rs-my25-sapphire-black-rhs-1080.webp";
+
 import bonnevilleT100JetBlackImage from "@/assets/bonneville-t100_my24_jet_black_rhs_1080px.webp";
 import bonnevilleT100AluminiumImage from "@/assets/bonneville-t100_my25_baja-orange_rhs_1080px.webp";
 import bonnevilleT100CompetitionGreenImage from "@/assets/bonneville-t100_my24_competition-green-ironstone_rhs_1080px.webp";
 import bonnevilleT100IconImage from "@/assets/bonneville-t100_my25_icon-edition_rhs_1080px.webp";
+
+import bonnevilleT120JetBlackImage from "@/assets/t120-black.webp";
+import bonnevilleT120CrystalWhiteImage from "@/assets/t120-red.webp";
+import bonnevilleT120BBlackWhiteImage from "@/assets/bonneville-t120_my24_jet-black-fusion-white_rhs_1080px.webp";
+import bonnevilleT120IconImage from "@/assets/bonneville t120_my25_icon_edition_rhs_1080px.webp";
+
+import bonnevilleT120BlackJetBlackImage from "@/assets/t120black-black.webp";
+import bonnevilleT120BlackGraphiteImage from "@/assets/bonneville_t120_black_my25_graphite_rhs_1080px.webp";
 
 import scrambler1200xSapphireBlackImage from "@/assets/scrambler_1200_x_my24_sapphire_black_rhs.webp";
 import scrambler1200xMatteKhakiImage from "@/assets/scrambler_1200_x_my26-matt-khaki-green-rhs-1080.webp";
@@ -179,11 +194,11 @@ const ClassicsPage = () => {
         id: "speed-twin-1200",
         name: "Speed Twin 1200",
         price: "14.990,00 €",
-        baseImage: "speedTwin1200AluminiumSilverImage",
+        baseImage: speedTwin1200AluminiumSilverImage,
         colors: [
-          { name: "Aluminium Silver", price: "14.990,00 €", image: "speedTwin1200AluminiumSilverImage" },
-          { name: "Crystal White", price: "15.340,00 €", image: "speedTwin1200CrystalWhiteImage" },
-          { name: "Carnival Red", price: "15.340,00 €", image: "speedTwin1200CarnivalRedImage" }
+          { name: "Aluminium Silver", price: "14.990,00 €", image: speedTwin1200AluminiumSilverImage },
+          { name: "Crystal White", price: "15.340,00 €", image: speedTwin1200CrystalWhiteImage },
+          { name: "Carnival Red", price: "15.340,00 €", image: speedTwin1200CarnivalRedImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "96 PS power", "112 NM torque"]
@@ -193,10 +208,10 @@ const ClassicsPage = () => {
         id: "speed-twin-1200-rs",
         name: "Speed Twin 1200 RS",
         price: "17.290,00 €",
-        baseImage: "speedTwin1200RsBajaOrangeImage",
+        baseImage: speedTwin1200RsBajaOrangeImage,
         colors: [
-          { name: "Baja Orange", price: "17.290,00 €", image: "speedTwin1200RsBajaOrangeImage" },
-          { name: "Sapphire Black", price: "17.290,00 €", image: "speedTwin1200RsSapphireBlackImage" }
+          { name: "Baja Orange", price: "17.290,00 €", image: speedTwin1200RsBajaOrangeImage },
+          { name: "Sapphire Black", price: "17.290,00 €", image: speedTwin1200RsSapphireBlackImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "96 PS power", "Premium suspension"]
@@ -237,12 +252,12 @@ const ClassicsPage = () => {
         id: "bonneville-t120",
         name: "Bonneville T120",
         price: "14.490,00 €",
-        baseImage: "bonnevilleT120CrystalWhiteImage",
+        baseImage: bonnevilleT120CrystalWhiteImage,
         colors: [
-          { name: "Jet Black", price: "14.490,00 €", image: "bonnevilleT120JetBlackImage" },
-          { name: "Crystal White", price: "14.840,00 €", image: "bonnevilleT120CrystalWhiteImage" },
-          { name: "Jet Black / Fusion White", price: "14.840,00 €", image: "bonnevilleT120BlackWhiteImage" },
-          { name: "Icon Edition", price: "15.290,00 €", image: "bonnevilleT120IconImage" }
+          { name: "Jet Black", price: "14.490,00 €", image: bonnevilleT120JetBlackImage },
+          { name: "Crystal White", price: "14.840,00 €", image: bonnevilleT120CrystalWhiteImage },
+          { name: "Jet Black / Fusion White", price: "14.840,00 €", image: bonnevilleT120BlackWhiteImage },
+          { name: "Icon Edition", price: "15.290,00 €", image: bonnevilleT120IconImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "80 PS power", "Classic styling"]
@@ -252,10 +267,10 @@ const ClassicsPage = () => {
         id: "bonneville-t120-black",
         name: "Bonneville T120 Black",
         price: "14.490,00 €",
-        baseImage: "bonnevilleT120BlackJetBlackImage",
+        baseImage: bonnevilleT120BlackJetBlackImage,
         colors: [
-          { name: "Jet Black", price: "14.490,00 €", image: "bonnevilleT120BlackJetBlackImage" },
-          { name: "Graphite", price: "14.840,00 €", image: "bonnevilleT120BlackGraphiteImage" }
+          { name: "Jet Black", price: "14.490,00 €", image: bonnevilleT120BlackJetBlackImage },
+          { name: "Graphite", price: "14.840,00 €", image: bonnevilleT120BlackGraphiteImage }
         ],
         specs: currentLanguage === 'en' 
           ? ["1200cc Bonneville twin", "80 PS power", "Blacked-out styling"]
