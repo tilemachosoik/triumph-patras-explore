@@ -222,7 +222,7 @@ const ClassicsPage = () => {
         id: "scrambler-1200-xe",
         name: "Scrambler 1200 XE",
         price: "16.990,00 €",
-        baseImage: scrambler1200xePhantomBlackImage,
+        baseImage: scrambler1200xeSapphireBlackImage,
         colors: [
           { name: "Sapphire Black", price: "16.990,00 €", image: scrambler1200xeSapphireBlackImage },
           { name: "Phantom Black / Storm Grey", price: "17.340,00 €", image: scrambler1200xeBlackGreyImage },
